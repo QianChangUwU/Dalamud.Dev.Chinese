@@ -61,7 +61,13 @@ const config: Config = {
           position: 'left',
           label: '文档',
         },
-        {to: '/blog', label: '新闻', position: 'left'},
+          {to: '/blog', label: '新闻', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'api/index',
+            position: 'left',
+            label: 'API',
+          },
         {
           href: 'https://github.com/goatcorp/Dalamud',
           label: 'GitHub',

@@ -34,6 +34,13 @@ const sidebars: SidebarsConfig = {
         'plugin-publishing/submission',
       ],
     },
+    {
+      type: 'category',
+      label: 'API 参考',
+      items: [
+        'api/index',
+      ],
+    },
     'faq',
   ],
 };
