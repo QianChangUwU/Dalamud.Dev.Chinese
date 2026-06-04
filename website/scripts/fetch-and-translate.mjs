@@ -6,12 +6,347 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const API_BASE = 'https://dalamud.dev/api';
 const OUTPUT_DIR = path.resolve(__dirname, '..', 'docs', 'api', 'namespaces');
 const TRANSLATIONS_PATH = path.resolve(__dirname, 'api-translations.json');
+const AI_CACHE_PATH = path.resolve(__dirname, 'ai-cache.json');
 
 const dict = JSON.parse(fs.readFileSync(TRANSLATIONS_PATH, 'utf-8'));
 const patternPrefixes = Object.keys(dict.patterns).sort((a, b) => b.length - a.length);
 const wordEntries = Object.entries(dict.words).sort((a, b) => b[0].length - a[0].length);
 
-// Known 98 namespaces (hardcoded so we don't depend on sidebar scraping)
+// ─── AI provider detection ──────────────────────────────────────────
+
+const AI_PROVIDERS = [];
+
+if (process.env.DEEPSEEK_API_KEY) {
+  AI_PROVIDERS.push({
+    name: 'DeepSeek',
+    key: process.env.DEEPSEEK_API_KEY,
+    endpoint: 'https://api.deepseek.com/v1/chat/completions',
+    model: 'deepseek-chat',
+  });
+}
+
+if (process.env.GITHUB_TOKEN) {
+  AI_PROVIDERS.push({
+    name: 'GitHub Models',
+    key: process.env.GITHUB_TOKEN,
+    endpoint: 'https://models.inference.ai.azure.com/chat/completions',
+    model: 'gpt-4o-mini',
+  });
+}
+
+const AI_PROVIDER = AI_PROVIDERS[0] || null;
+
+// ─── AI translation state ──────────────────────────────────────────
+
+const PENDING = new Map(); // original → { norm, dictResult, occurrences: [{ns, section, name}] }
+let AI_CACHE = new Map(); // original → aiTranslation
+
+function loadAiCache() {
+  try {
+    if (fs.existsSync(AI_CACHE_PATH)) {
+      const data = JSON.parse(fs.readFileSync(AI_CACHE_PATH, 'utf-8'));
+      AI_CACHE = new Map(Object.entries(data));
+      console.log(`📦 AI cache loaded: ${AI_CACHE.size} entries`);
+    }
+  } catch { /* ignore */ }
+}
+
+function saveAiCache() {
+  const obj = Object.fromEntries(AI_CACHE);
+  fs.writeFileSync(AI_CACHE_PATH, JSON.stringify(obj, null, 2), 'utf-8');
+}
+
+// ─── Translation helpers ───────────────────────────────────────────
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function wordReplace(text) {
+  let result = text;
+  for (const [en, zh] of wordEntries) {
+    const regex = new RegExp(`\\b${escapeRegex(en)}\\b`, 'gi');
+    result = result.replace(regex, zh);
+  }
+  return result;
+}
+
+function stripTrailingPunct(text) {
+  return text.replace(/[.,;:!?]+(\s|$)/g, '$1').replace(/[.,;:!?]+$/, '');
+}
+
+function needsAI(text) {
+  if (!/[a-zA-Z]/.test(text)) return false;
+  const ascii = (text.match(/[a-zA-Z]/g) || []).length;
+  return (ascii / Math.max(text.length, 1)) > 0.25;
+}
+
+function normalize(text) {
+  return text.trim().replace(/\s+/g, ' ');
+}
+
+function translate(text, ns, section, name) {
+  const t = normalize(text);
+  if (!t) return t;
+
+  // Phase 1: Exact match
+  if (dict.exact[t]) return dict.exact[t];
+
+  let result;
+  // Phase 2: Pattern matching
+  for (const prefixEn of patternPrefixes) {
+    if (t.startsWith(prefixEn)) {
+      const remainder = stripTrailingPunct(t.slice(prefixEn.length).trim());
+      const template = dict.patterns[prefixEn];
+      if (remainder) {
+        result = template.replace('{0}', wordReplace(remainder));
+      } else {
+        result = template.replace('{0}', '').replace(/\s+/g, ' ').trim();
+      }
+      break;
+    }
+  }
+
+  // Phase 3: Word replacement fallback
+  if (!result && /^[A-Za-z]/.test(t) && t.split(' ').length > 1) {
+    result = wordReplace(t);
+  }
+
+  if (!result) result = t;
+
+  // Check if AI is needed
+  if (AI_PROVIDER && needsAI(result)) {
+    const normKey = t.toLowerCase().replace(/\s+/g, ' ');
+    if (!PENDING.has(normKey)) {
+      PENDING.set(normKey, { norm: t, dictResult: result, occurrences: [] });
+    }
+    PENDING.get(normKey).occurrences.push({ ns, section, name });
+  }
+
+  return result;
+}
+
+// ─── AI batch translation ──────────────────────────────────────────
+
+async function batchAiTranslate() {
+  if (!AI_PROVIDER || PENDING.size === 0) return;
+
+  loadAiCache();
+
+  // Only translate entries not in cache
+  const toTranslate = [...PENDING.values()].filter(e => !AI_CACHE.has(e.norm));
+  if (toTranslate.length === 0) {
+    console.log(`🤖 All ${PENDING.size} pending items already cached, skipping AI`);
+    return;
+  }
+
+  const uniqueTexts = [...new Set(toTranslate.map(e => e.norm))];
+  const keyPreview = AI_PROVIDER.key.slice(0, 8);
+  console.log(`🤖 AI translating ${uniqueTexts.length} descriptions via ${AI_PROVIDER.name} (key: ${keyPreview}...)`);
+
+  // Batch in chunks
+  const CHUNK = 30;
+  let done = 0;
+
+  for (let i = 0; i < uniqueTexts.length; i += CHUNK) {
+    const batch = uniqueTexts.slice(i, i + CHUNK);
+    const prompt = `Translate the following English API documentation descriptions (from C# XML /// comments) to Chinese. These describe classes, interfaces, enums, methods in a game modding framework called Dalamud for FFXIV.
+
+Rules:
+- Keep ALL C# type names, method names, property names, code snippets in original English (e.g. IAddonEventManager, Dalamud, EntryPoint, etc.)
+- Only translate descriptive text
+- Output a valid JSON object where keys are the original strings and values are Chinese translations
+- No markdown, no extra text, just JSON
+
+Input:
+${JSON.stringify(batch, null, 2)}`;
+
+    try {
+      const resp = await fetch(AI_PROVIDER.endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${AI_PROVIDER.key}`,
+        },
+        body: JSON.stringify({
+          model: AI_PROVIDER.model,
+          messages: [
+            { role: 'system', content: 'You are a translator for C# API documentation. Output only valid JSON.' },
+            { role: 'user', content: prompt },
+          ],
+          response_format: { type: 'json_object' },
+          max_tokens: 4096,
+          temperature: 0.1,
+        }),
+        signal: AbortSignal.timeout(60000),
+      });
+
+      if (!resp.ok) {
+        const errText = await resp.text();
+        throw new Error(`HTTP ${resp.status}: ${errText.slice(0, 200)}`);
+      }
+
+      const data = await resp.json();
+      const parsed = JSON.parse(data.choices[0].message.content);
+
+      for (const [orig, translated] of Object.entries(parsed)) {
+        AI_CACHE.set(orig, translated);
+      }
+
+      done += batch.length;
+      process.stdout.write(`\r  🤖 ${done}/${uniqueTexts.length} translated`);
+    } catch (err) {
+      console.error(`\n  ✗ AI batch failed: ${err.message}`);
+    }
+  }
+
+  console.log('');
+  saveAiCache();
+  console.log(`📦 AI cache saved (${AI_CACHE.size} entries)`);
+}
+
+// ─── HTML parsing ──────────────────────────────────────────────────
+
+function extractMainContent(html) {
+  const m = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  if (m) return m[1];
+  const a = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  return a ? a[1] : html;
+}
+
+function extractNamespaceTitle(html) {
+  const m = html.match(/<title[^>]*>Namespace\s+([\w.]+)\s*\|/i);
+  return m ? m[1] : null;
+}
+
+function extractTypeEntries(mainHtml) {
+  const entries = [];
+
+  const parts = mainHtml.split(/<h2[^>]*>/i);
+  for (let i = 0; i < parts.length; i++) {
+    const sectionMatch = parts[i].match(/^([^<]+)/);
+    if (!sectionMatch) continue;
+    const sectionName = sectionMatch[1].replace(/<[^>]*>/g, '').trim();
+    const sectionContent = parts[i];
+
+    const h3Regex = /<h3[^>]*id="([^"]*)"[^>]*>([\s\S]*?)<\/h3>/gi;
+    const h3Positions = [];
+    let h3Match;
+    while ((h3Match = h3Regex.exec(sectionContent)) !== null) {
+      h3Positions.push({
+        name: h3Match[2].replace(/<[^>]*>/g, '').trim(),
+        start: h3Match.index,
+        end: h3Match.index + h3Match[0].length,
+      });
+    }
+
+    for (let j = 0; j < h3Positions.length; j++) {
+      const h3 = h3Positions[j];
+      const nextStart = j < h3Positions.length - 1 ? h3Positions[j + 1].start : sectionContent.length;
+      const descHtml = sectionContent.slice(h3.end, nextStart);
+
+      const pContents = [];
+      const pRegex = /<p>([\s\S]*?)<\/p>/gi;
+      let pMatch;
+      while ((pMatch = pRegex.exec(descHtml)) !== null) {
+        const cleaned = pMatch[1]
+          .replace(/<[^>]*>/g, '')
+          .replace(/&#x27;/g, "'")
+          .replace(/&quot;/g, '"')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&apos;/g, "'")
+          .replace(/\s+/g, ' ')
+          .trim();
+        if (cleaned) pContents.push(cleaned);
+      }
+
+      if (h3.name && !h3.name.startsWith('#')) {
+        entries.push({
+          section: sectionName,
+          name: h3.name,
+          description: pContents.join('\n\n'),
+        });
+      }
+    }
+  }
+
+  return entries;
+}
+
+// ─── Markdown generation ───────────────────────────────────────────
+
+const SECTION_LABELS = {
+  Classes: '类',
+  Interfaces: '接口',
+  Enums: '枚举',
+  Delegates: '委托',
+  Structs: '结构体',
+  'Value Types': '值类型',
+  Records: '记录',
+};
+
+function translateEntry(entry, ns) {
+  // Try dictionary first
+  const dictResult = translate(entry.description, ns, entry.section, entry.name);
+
+  // If AI cache has a better translation, use it
+  const normKey = normalize(entry.description).toLowerCase().replace(/\s+/g, ' ');
+  if (AI_PROVIDER && AI_CACHE.has(normKey)) {
+    return AI_CACHE.get(normKey);
+  }
+
+  return dictResult;
+}
+
+function toMarkdown(namespace, entries) {
+  const title = namespace;
+  let md = `---\nsidebar_label: "${title}"\n---\n\n`;
+  md += `# ${title}\n\n`;
+  md += `> 🌐 本页是 [dalamud.dev/api/${namespace}/](https://dalamud.dev/api/${namespace}/) 的中文翻译。\n`;
+  md += `> 类型/方法名称保留英文原文，仅翻译说明文字。\n\n`;
+
+  const sections = [...new Set(entries.map(e => e.section))];
+
+  for (const section of sections) {
+    const sectionEntries = entries.filter(e => e.section === section);
+    if (sectionEntries.length === 0) continue;
+
+    const zhLabel = SECTION_LABELS[section] || section;
+    md += `## ${zhLabel}\n\n`;
+
+    for (const entry of sectionEntries) {
+      const translated = translateEntry(entry, namespace);
+      md += `### ${entry.name}\n\n`;
+      md += `${translated}\n\n`;
+    }
+  }
+
+  return md;
+}
+
+// ─── HTTP ──────────────────────────────────────────────────────────
+
+async function fetchWithRetry(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const resp = await fetch(url, {
+        headers: { 'User-Agent': 'Dalamud.Dev.Chinese/1.0' },
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return await resp.text();
+    } catch (err) {
+      if (i === retries - 1) throw err;
+      console.warn(`  Retry ${i + 1}/${retries}: ${err.message}`);
+      await new Promise(r => setTimeout(r, 2000 * (i + 1)));
+    }
+  }
+}
+
+// ─── Main ──────────────────────────────────────────────────────────
+
 const KNOWN_NAMESPACES = [
   'Dalamud', 'Dalamud.Configuration', 'Dalamud.Console',
   'Dalamud.Game', 'Dalamud.Game.Addon.Events', 'Dalamud.Game.Addon.Events.EventDataTypes',
@@ -59,218 +394,32 @@ const KNOWN_NAMESPACES = [
   'Dalamud.Utility.Timing',
 ];
 
-// ─── Translation helpers ───────────────────────────────────────────
-
-function escapeRegex(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function wordReplace(text) {
-  let result = text;
-  for (const [en, zh] of wordEntries) {
-    const regex = new RegExp(`\\b${escapeRegex(en)}\\b`, 'gi');
-    result = result.replace(regex, zh);
-  }
-  return result;
-}
-
-function stripTrailingPunct(text) {
-  return text.replace(/[.,;:!?]+(\s|$)/g, '$1').replace(/[.,;:!?]+$/, '');
-}
-
-function translate(description) {
-  let text = description.trim().replace(/\s+/g, ' ');
-  if (!text) return text;
-
-  // Phase 1: Exact match
-  if (dict.exact[text]) return dict.exact[text];
-
-  // Phase 2: Pattern matching with {0} placeholder
-  for (const prefixEn of patternPrefixes) {
-    if (text.startsWith(prefixEn)) {
-      const remainder = stripTrailingPunct(text.slice(prefixEn.length).trim());
-      const template = dict.patterns[prefixEn];
-      if (remainder) {
-        // Apply word-level replacements to the remainder only
-        const remainderZh = wordReplace(remainder);
-        return template.replace('{0}', remainderZh);
-      }
-      return template.replace('{0}', '').replace(/\s+/g, ' ').trim();
-    }
-  }
-
-  // Phase 3: Direct word replacement (only if mostly English)
-  // Skip if text is already Chinese or mixed
-  if (/^[A-Za-z]/.test(text) && text.split(' ').length > 1) {
-    return wordReplace(text);
-  }
-
-  return text;
-}
-
-// ─── HTML parsing ──────────────────────────────────────────────────
-
-function extractMainContent(html) {
-  const m = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (m) return m[1];
-  const a = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
-  return a ? a[1] : html;
-}
-
-function extractNamespaceTitle(html) {
-  const m = html.match(/<title[^>]*>Namespace\s+([\w.]+)\s*\|/i);
-  return m ? m[1] : null;
-}
-
-function extractTypeEntries(mainHtml) {
-  const entries = [];
-
-  // Split into sections by h2
-  const parts = mainHtml.split(/<h2[^>]*>/i);
-  for (let i = 0; i < parts.length; i++) {
-    const sectionMatch = parts[i].match(/^([^<]+)/);
-    if (!sectionMatch) continue;
-    const sectionName = sectionMatch[1].replace(/<[^>]*>/g, '').trim();
-
-    const sectionContent = parts[i];
-
-    // Extract h3 + p(s)
-    const h3Regex = /<h3[^>]*id="([^"]*)"[^>]*>([\s\S]*?)<\/h3>/gi;
-    let h3Match;
-    let lastIndex = 0;
-    const h3Positions = [];
-
-    while ((h3Match = h3Regex.exec(sectionContent)) !== null) {
-      h3Positions.push({
-        name: h3Match[2].replace(/<[^>]*>/g, '').trim(),
-        start: h3Match.index,
-        end: h3Match.index + h3Match[0].length,
-      });
-    }
-
-    for (let j = 0; j < h3Positions.length; j++) {
-      const h3 = h3Positions[j];
-      const nextStart = j < h3Positions.length - 1 ? h3Positions[j + 1].start : sectionContent.length;
-
-      // Content between this h3 and the next h3 (or end of section)
-      const descHtml = sectionContent.slice(h3.end, nextStart);
-
-      // Extract text from <p> tags
-      const pContents = [];
-      const pRegex = /<p>([\s\S]*?)<\/p>/gi;
-      let pMatch;
-      while ((pMatch = pRegex.exec(descHtml)) !== null) {
-        const cleaned = pMatch[1]
-          .replace(/<[^>]*>/g, '')
-          .replace(/&#x27;/g, "'")
-          .replace(/&quot;/g, '"')
-          .replace(/&amp;/g, '&')
-          .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>')
-          .replace(/&apos;/g, "'")
-          .replace(/\s+/g, ' ')
-          .trim();
-        if (cleaned) pContents.push(cleaned);
-      }
-
-      if (h3.name && !h3.name.startsWith('#')) {
-        entries.push({
-          section: sectionName,
-          name: h3.name,
-          description: pContents.join('\n\n'),
-        });
-      }
-    }
-  }
-
-  return entries;
-}
-
-// ─── Markdown generation ───────────────────────────────────────────
-
-const SECTION_LABELS = {
-  Classes: '类',
-  Interfaces: '接口',
-  Enums: '枚举',
-  Delegates: '委托',
-  Structs: '结构体',
-  'Value Types': '值类型',
-  'Records': '记录',
-};
-
-function toMarkdown(namespace, entries) {
-  const title = namespace;
-  let md = `---\nsidebar_label: "${title}"\n---\n\n`;
-  md += `# ${title}\n\n`;
-  md += `> 🌐 本页是 [dalamud.dev/api/${namespace}/](https://dalamud.dev/api/${namespace}/) 的中文翻译。\n`;
-  md += `> 类型/方法名称保留英文原文，仅翻译说明文字。\n\n`;
-
-  const sections = [...new Set(entries.map(e => e.section))];
-
-  for (const section of sections) {
-    const sectionEntries = entries.filter(e => e.section === section);
-    if (sectionEntries.length === 0) continue;
-
-    const zhLabel = SECTION_LABELS[section] || section;
-    md += `## ${zhLabel}\n\n`;
-
-    for (const entry of sectionEntries) {
-      const translated = translate(entry.description);
-      md += `### ${entry.name}\n\n`;
-      md += `${translated}\n\n`;
-    }
-  }
-
-  return md;
-}
-
-// ─── HTTP ──────────────────────────────────────────────────────────
-
-async function fetchWithRetry(url, retries = 3) {
-  for (let i = 0; i < retries; i++) {
-    try {
-      const resp = await fetch(url, {
-        headers: { 'User-Agent': 'Dalamud.Dev.Chinese/1.0' },
-        signal: AbortSignal.timeout(20000),
-      });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      return await resp.text();
-    } catch (err) {
-      if (i === retries - 1) throw err;
-      console.warn(`  Retry ${i + 1}/${retries} for ${url}: ${err.message}`);
-      await new Promise(r => setTimeout(r, 2000 * (i + 1)));
-    }
-  }
-}
-
-// ─── Main ──────────────────────────────────────────────────────────
-
 async function main() {
   console.log(`🔧 Output: ${OUTPUT_DIR}`);
+  const providers = AI_PROVIDERS.map(p => p.name).join(' + ') || 'none';
+console.log(`🤖 AI translation: ${AI_PROVIDER ? `ENABLED (${providers})` : 'DISABLED (set GITHUB_TOKEN or DEEPSEEK_API_KEY)'}`);
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-  // Try to discover namespaces from index page, fall back to hardcoded list
+  if (AI_PROVIDER) loadAiCache();
+
+  // Discover namespaces
   let namespaces = [...KNOWN_NAMESPACES];
   try {
-    console.log('🌐 Fetching API index page to discover namespaces...');
+    console.log('🌐 Fetching API index page...');
     const indexHtml = await fetchWithRetry(`${API_BASE}/`);
     const discovered = new Set();
     const linkRegex = /<a[^>]*href="\/api\/([\w.]+(?:\.[\w.]+)*)\/"[^>]*>/gi;
     let m;
     while ((m = linkRegex.exec(indexHtml)) !== null) {
       const ns = m[1];
-      if (ns && !ns.includes('/') && ns.split('.').length >= 1) {
-        discovered.add(ns);
-      }
+      if (ns && !ns.includes('/') && ns.split('.').length >= 1) discovered.add(ns);
     }
     if (discovered.size > 0) {
       namespaces = [...discovered].sort();
-      console.log(`📋 Discovered ${namespaces.length} namespaces from index page`);
-    } else {
-      console.log(`📋 Using known list of ${namespaces.length} namespaces`);
+      console.log(`📋 Discovered ${namespaces.length} namespaces`);
     }
   } catch (err) {
-    console.warn(`⚠ Index fetch failed: ${err.message}, using known list (${namespaces.length})`);
+    console.warn(`⚠ Index fetch failed, using known list (${namespaces.length})`);
   }
 
   // Fetch each namespace page
@@ -280,43 +429,72 @@ async function main() {
 
   for (let i = 0; i < namespaces.length; i += concurrency) {
     const batch = namespaces.slice(i, i + concurrency);
-
     const results = await Promise.allSettled(
       batch.map(async (ns) => {
         const url = `${API_BASE}/${encodeURIComponent(ns)}/`;
         const progress = `[${i + batch.indexOf(ns) + 1}/${namespaces.length}]`;
         process.stdout.write(`  ${progress} ${ns}... `);
 
-        const html = await fetchWithRetry(url);
-        const mainHtml = extractMainContent(html);
-        const resolvedNs = extractNamespaceTitle(html) || ns;
-        const entries = extractTypeEntries(mainHtml);
+        try {
+          const html = await fetchWithRetry(url);
+          const mainHtml = extractMainContent(html);
+          const resolvedNs = extractNamespaceTitle(html) || ns;
+          const entries = extractTypeEntries(mainHtml);
 
-        if (entries.length === 0) {
-          console.log(`⚠ no entries`);
+          if (entries.length === 0) {
+            console.log('⚠ no entries');
+            failed++;
+            return;
+          }
+
+          const md = toMarkdown(resolvedNs, entries);
+          const outFile = path.join(OUTPUT_DIR, `${ns}.md`);
+          fs.writeFileSync(outFile, md, 'utf-8');
+          console.log(`✓ ${entries.length} entries`);
+          success++;
+        } catch (err) {
+          console.log(`✗ ${err.message}`);
           failed++;
-          return;
         }
-
-        const md = toMarkdown(resolvedNs, entries);
-        const outFile = path.join(OUTPUT_DIR, `${ns}.md`);
-        fs.writeFileSync(outFile, md, 'utf-8');
-        console.log(`✓ ${entries.length} entries`);
-        success++;
       })
     );
-
-    for (const r of results) {
-      if (r.status === 'rejected') {
-        console.log(`✗ ${r.reason?.message || r.reason}`);
-        failed++;
-      }
-    }
   }
 
-  console.log(`\n✅ Done! ${success} succeeded, ${failed} failed`);
+  console.log(`\n✅ Dictionary pass: ${success} succeeded, ${failed} failed`);
 
-  // Write _category_.json for sidebar organization
+  // AI batch translation
+  if (AI_PROVIDER && PENDING.size > 0) {
+    console.log(`🤖 ${PENDING.size} descriptions flagged for AI translation`);
+    await batchAiTranslate();
+
+    // Rebuild files with AI translations
+    console.log('📝 Rebuilding files with AI translations...');
+    for (let i = 0; i < namespaces.length; i += concurrency) {
+      const batch = namespaces.slice(i, i + concurrency);
+      await Promise.allSettled(
+        batch.map(async (ns) => {
+          const filePath = path.join(OUTPUT_DIR, `${ns}.md`);
+          if (!fs.existsSync(filePath)) return;
+
+          const url = `${API_BASE}/${encodeURIComponent(ns)}/`;
+          try {
+            const html = await fetchWithRetry(url);
+            const mainHtml = extractMainContent(html);
+            const resolvedNs = extractNamespaceTitle(html) || ns;
+            const entries = extractTypeEntries(mainHtml);
+
+            if (entries.length === 0) return;
+
+            const md = toMarkdown(resolvedNs, entries);
+            fs.writeFileSync(filePath, md, 'utf-8');
+          } catch { /* skip if fails */ }
+        })
+      );
+    }
+    console.log('✅ AI translation pass complete');
+  }
+
+  // Write _category_.json
   const categoryJson = {
     label: '命名空间',
     position: 2,

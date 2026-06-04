@@ -32,6 +32,9 @@ jobs:
         run: npm ci
 
       - name: 抓取并翻译 API 页面
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: npm run fetch-api
 
       - name: 检查是否有变更
