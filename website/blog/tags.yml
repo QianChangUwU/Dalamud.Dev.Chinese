@@ -1,0 +1,54 @@
+声明:
+  label: 声明
+  permalink: /statement
+  description: Dalamud 官方声明
+
+隐私:
+  label: 隐私
+  permalink: /privacy
+  description: 隐私相关内容
+
+升级:
+  label: 升级
+  permalink: /upgrade
+  description: 框架升级
+
+.NET:
+  label: .NET
+  permalink: /dotnet
+  description: .NET 相关
+
+发布:
+  label: 发布
+  permalink: /release
+  description: 版本发布
+
+API9:
+  label: API9
+  permalink: /api9
+  description: API9 相关
+
+站点:
+  label: 站点
+  permalink: /site
+  description: 站点相关
+
+文档:
+  label: 文档
+  permalink: /docs
+  description: 文档相关
+
+变更:
+  label: 变更
+  permalink: /changes
+  description: 功能变更
+
+开发:
+  label: 开发
+  permalink: /dev
+  description: 开发相关
+
+更新:
+  label: 更新
+  permalink: /updates
+  description: 月度更新

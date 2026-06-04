@@ -1,0 +1,41 @@
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+
+const sidebars: SidebarsConfig = {
+  docsSidebar: [
+    'intro',
+    'code-of-conduct',
+    'building-dalamud',
+    {
+      type: 'category',
+      label: '插件开发',
+      items: [
+        'plugin-development/getting-started',
+        'plugin-development/project-layout',
+        'plugin-development/plugin-metadata',
+        'plugin-development/interacting-with-game',
+        'plugin-development/how-tos',
+        'plugin-development/reverse-engineering',
+        'plugin-development/sestring',
+        'plugin-development/technical-considerations',
+        'plugin-development/glossary',
+      ],
+    },
+    'versions-channels',
+    {
+      type: 'category',
+      label: '发布插件',
+      items: [
+        'plugin-publishing/index',
+        'plugin-publishing/advanced',
+        'plugin-publishing/ai-policy',
+        'plugin-publishing/approval-process',
+        'plugin-publishing/custom-repositories',
+        'plugin-publishing/restrictions',
+        'plugin-publishing/submission',
+      ],
+    },
+    'faq',
+  ],
+};
+
+export default sidebars;

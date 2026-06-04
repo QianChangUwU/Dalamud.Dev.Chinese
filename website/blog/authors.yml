@@ -1,0 +1,23 @@
+dalamud_maintainers:
+  name: Dalamud 维护团队
+  title: Dalamud 维护者
+  url: https://github.com/goatcorp
+  image_url: https://raw.githubusercontent.com/goatcorp/DalamudAssets/refs/heads/master/UIRes/tsmLogo.png
+
+goat:
+  name: goat
+  title: Dalamud/XIVLauncher 维护者
+  url: https://github.com/goaaats
+  image_url: https://github.com/goaaats.png
+
+avaflow:
+  name: Avaflow
+  title: Dalamud 维护者
+  url: https://github.com/avafloww
+  image_url: https://github.com/avafloww.png
+
+kal:
+  name: kal
+  title: 社区贡献者
+  url: https://github.com/kalilistic
+  image_url: https://github.com/kalilistic.png
