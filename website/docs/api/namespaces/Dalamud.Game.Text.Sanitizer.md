@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.Text.Sanitizer"
 
 ### Sanitizer​
 
-Sanitize strings to remove soft hyphens and other special 角色.
+清理字符串以去除软连字符和其他特殊字符。
 
 ## 接口
 
 ### ISanitizer​
 
-Sanitize strings to remove soft hyphens and other special 角色.
+清理字符串以去除软连字符和其他特殊字符。
 

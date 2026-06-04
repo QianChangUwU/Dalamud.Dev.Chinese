@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.ClientState.Objects.SubKinds"
 
 ### IEventObj​
 
-This 接口 represents an EventObj.
+此接口表示一个EventObj。
 
 ### INpc​
 
-This 接口 represents a NPC.
+此接口表示一个NPC。
 
 ### IPlayerCharacter​
 

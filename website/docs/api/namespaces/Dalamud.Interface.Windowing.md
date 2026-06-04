@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Interface.Windowing"
 
 ### TitleBarButton​
 
-结构 describing a title bar button.
+描述标题栏按钮的结构。
 
 ### Window​
 
@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Interface.Windowing"
 
 ### WindowHost​
 
-Base 类 you can use to implement an ImGui window for use with the built-in Dalamud.接口.Windowing.WindowSystem.
+您可以使用的基类，用于实现与内置的 Dalamud.Interface.Windowing.WindowSystem 一起使用的 ImGui 窗口。
 
 ### WindowSystem​
 
@@ -29,15 +29,15 @@ Base 类 you can use to implement an ImGui window for use with the built-in Dala
 
 ### WindowSizeConstraints​
 
-结构 detailing the size constraints of a window.
+详细说明窗口大小约束的结构。
 
 ## 接口
 
 ### IWindow​
 
-表示 a ImGui window for use with the built-in Dalamud.接口.Windowing.WindowSystem
+表示一个用于内置 Dalamud.Interface.Windowing.WindowSystem 的 ImGui 窗口。
 
 ### IWindowSystem​
 
-类 running a WindowSystem using Dalamud.接口.Windowing.IWindow implementations to simplify ImGui windowing.
+使用 Dalamud.Interface.Windowing.IWindow 实现来简化 ImGui 窗口管理的 WindowSystem 运行类。
 

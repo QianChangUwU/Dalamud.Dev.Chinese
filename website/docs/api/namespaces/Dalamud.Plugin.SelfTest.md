@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Plugin.SelfTest"
 
 ### ISelfTestStep​
 
-test implementations 的接口
+测试实现的接口。
 
 ## 枚举
 
 ### SelfTestStepResult​
 
-枚举 declaring result states of tests.
+声明测试结果状态的枚举。
 

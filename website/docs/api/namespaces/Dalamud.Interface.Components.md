@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.Components"
 
 ### ImGuiComponents​
 
-类 containing various 方法 providing ImGui components.
+包含提供 ImGui 组件的各种方法的类。
 

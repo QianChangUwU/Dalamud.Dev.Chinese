@@ -11,15 +11,15 @@ sidebar_label: "Dalamud.Plugin.Internal.Types.Manifest"
 
 ### SpecialPluginSource​
 
-A fake 枚举 representing "special" sources for 插件.
+一个虚假的枚举，表示插件的“特殊”来源。
 
 ## 接口
 
 ### ILocalPluginManifest​
 
-Public 接口 for the local 插件 manifest.
+本地插件清单的公共接口。
 
 ### IPluginManifest​
 
-Public 接口 for the base 插件 manifest.
+基础插件清单的公共接口。
 

@@ -11,93 +11,93 @@ sidebar_label: "Dalamud.Game.ClientState.JobGauge.Types"
 
 ### ASTGauge​
 
-In-内存 AST 职业量谱.
+内存中的 AST 职业计量器。
 
 ### BLMGauge​
 
-In-内存 BLM 职业量谱.
+内存中的 BLM 职业计量器。
 
 ### BRDGauge​
 
-In-内存 BRD 职业量谱.
+内存中的 BRD 职业计量器。
 
 ### DNCGauge​
 
-In-内存 DNC 职业量谱.
+内存中的 DNC 职业计量器。
 
 ### DRGGauge​
 
-In-内存 DRG 职业量谱.
+内存中的 DRG 职业计量器。
 
 ### DRKGauge​
 
-In-内存 DRK 职业量谱.
+内存中的 DRK 职业计量器。
 
 ### GNBGauge​
 
-In-内存 GNB 职业量谱.
+内存中的 GNB 职业计量器。
 
 ### JobGaugeBase​
 
-Base 职业量谱 类.
+职业计量器基类。
 
 ### JobGaugeBase&lt;T&gt;​
 
-Base 职业量谱 类.
+职业计量器基类。
 
 ### MCHGauge​
 
-In-内存 MCH 职业量谱.
+内存中的 MCH 职业计量器。
 
 ### MNKGauge​
 
-In-内存 MNK 职业量谱.
+内存中的 MNK 职业计量器。
 
 ### NINGauge​
 
-In-内存 NIN 职业量谱.
+内存中的 NIN 职业计量器。
 
 ### PCTGauge​
 
-In-内存 PCT 职业量谱.
+内存中的 PCT 职业计量器。
 
 ### PLDGauge​
 
-In-内存 PLD 职业量谱.
+内存中的 PLD 职业计量器。
 
 ### RDMGauge​
 
-In-内存 RDM 职业量谱.
+内存中的 RDM 职业计量器。
 
 ### RPRGauge​
 
-In-内存 RPR 职业量谱.
+内存中的 RPR 职业计量器。
 
 ### SAMGauge​
 
-In-内存 SAM 职业量谱.
+内存中的 SAM 职业计量器。
 
 ### SCHGauge​
 
-In-内存 SCH 职业量谱.
+内存中的 SCH 职业计量器。
 
 ### SGEGauge​
 
-In-内存 SGE 职业量谱.
+内存中的SGE职业计量器。
 
 ### SMNGauge​
 
-In-内存 SMN 职业量谱.
+内存中的SMN职业计量器。
 
 ### VPRGauge​
 
-In-内存 VPR 职业量谱.
+内存中的VPR职业计量器。
 
 ### WARGauge​
 
-In-内存 WAR 职业量谱.
+内存中的WAR职业计量器。
 
 ### WHMGauge​
 
-In-内存 WHM 职业量谱.
+内存中的WHM职业计量器。
 

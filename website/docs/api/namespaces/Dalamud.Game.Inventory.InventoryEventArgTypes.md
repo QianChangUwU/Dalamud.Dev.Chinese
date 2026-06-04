@@ -11,33 +11,33 @@ sidebar_label: "Dalamud.Game.Inventory.InventoryEventArgTypes"
 
 ### InventoryComplexEventArgs​
 
-表示 the 数据 associated with an item being affected across different slots possibly in different containers
+表示与在不同槽位中受到影响的物品相关的数据，可能在不同的容器中。
 
 ### InventoryEventArgs​
 
-Abstract base 类 representing 背包 changed 事件.
+表示库存更改事件的抽象基类。
 
 ### InventoryItemAddedArgs​
 
-表示 the 数据 associated with an item being added to an 背包
+表示与物品被添加到库存相关的数据。
 
 ### InventoryItemChangedArgs​
 
-表示 the 数据 associated with an items properties being changed This also includes an items stack count changing
+表示与物品属性更改相关的数据。这还包括物品堆叠数量的变化。
 
 ### InventoryItemMergedArgs​
 
-表示 the 数据 associated with an item being merged from two stacks into one
+表示与物品从两个堆叠合并为一个相关的数据。
 
 ### InventoryItemMovedArgs​
 
-表示 the 数据 associated with an item being moved from one 背包 and added to another
+表示与物品从一个库存移动并添加到另一个库存相关的数据。
 
 ### InventoryItemRemovedArgs​
 
-表示 the 数据 associated with an item being removed from an 背包
+表示与物品从库存中移除相关的数据。
 
 ### InventoryItemSplitArgs​
 
-表示 the 数据 associated with an item being split from one stack into two
+表示与物品从一个堆叠分裂为两个相关的数据。
 

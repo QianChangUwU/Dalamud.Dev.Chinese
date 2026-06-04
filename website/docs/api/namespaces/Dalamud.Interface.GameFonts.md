@@ -11,57 +11,57 @@ sidebar_label: "Dalamud.Interface.GameFonts"
 
 ### FdtReader​
 
-Parses a game font file.
+解析游戏字体文件。
 
 ### GameFontLayoutPlan​
 
-Plan on how glyphs will be rendered.
+关于字形如何渲染的计划。
 
 ### GameFontLayoutPlan.Builder​
 
-Build a GameFontLayoutPlan.
+构建一个 GameFontLayoutPlan。
 
 ### GameFontLayoutPlan.Element​
 
-Plan on how each glyph will be rendered.
+关于每个字形如何渲染的计划。
 
 ## 结构体
 
 ### FdtReader.FdtHeader​
 
-Header of game font file format.
+游戏字体文件格式的头部。
 
 ### FdtReader.FontTableEntry​
 
-Glyph table entry.
+字形表条目。
 
 ### FdtReader.FontTableHeader​
 
-Header of glyph table.
+字形表的头部。
 
 ### FdtReader.KerningTableEntry​
 
-Kerning table entry.
+字距调整表条目。
 
 ### FdtReader.KerningTableHeader​
 
-Header of kerning table.
+字距调整表的头部。
 
 ### GameFontStyle​
 
-Describes a font based on game resource file.
+描述基于游戏资源文件的字体。
 
 ## 枚举
 
 ### GameFontFamily​
 
-枚举 of available game font families.
+可用游戏字体系列的枚举。
 
 ### GameFontFamilyAndSize​
 
-枚举 of available game fonts in specific sizes.
+特定大小的可用游戏字体的枚举。
 
 ### GameFontLayoutPlan.HorizontalAlignment​
 
-Horizontal alignment.
+水平对齐。
 

@@ -11,65 +11,65 @@ sidebar_label: "Dalamud.Interface.ManagedFontAtlas"
 
 ### FontAtlasBuildToolkitUtilities​
 
-Convenience 函数 for building fonts through Dalamud.接口.ManagedFontAtlas.IFontAtlas.
+通过 Dalamud.Interface.ManagedFontAtlas.IFontAtlas 构建字体的便捷函数。
 
 ## 结构体
 
 ### FluentGlyphRangeBuilder​
 
-A fluent ImGui glyph range builder.
+流畅的 ImGui 字形范围构建器。
 
 ### SafeFontConfig​
 
-Managed version of Dalamud.Bindings.ImGui.ImFontConfig, to avoid unnecessary heap allocation and use of unsafe blocks.
+Dalamud.Bindings.ImGui.ImFontConfig 的托管版本，以避免不必要的堆分配和使用不安全的代码块。
 
 ## 接口
 
 ### IFontAtlas​
 
-Wrapper for Dalamud.Bindings.ImGui.ImFontAtlasPtr. Not intended for 插件 to implement.
+Dalamud.Bindings.ImGui.ImFontAtlasPtr 的包装器。并不打算供插件实现。
 
 ### IFontAtlasBuildToolkit​
 
-Common stuff for Dalamud.接口.ManagedFontAtlas.IFontAtlasBuildToolkitPreBuild and Dalamud.接口.ManagedFontAtlas.IFontAtlasBuildToolkitPostBuild. Not intended for 插件 to implement.
+用于 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPreBuild 和 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPostBuild 的公共内容。并不打算供插件实现。
 
 ### IFontAtlasBuildToolkitPostBuild​
 
-Toolkit for use when the build state is Dalamud.接口.ManagedFontAtlas.FontAtlasBuildStep.PostBuild. Not intended for 插件 to implement.
+在构建状态为 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStep.PostBuild 时使用的工具包。并不打算供插件实现。
 
 ### IFontAtlasBuildToolkitPreBuild​
 
-Toolkit for use when the build state is Dalamud.接口.ManagedFontAtlas.FontAtlasBuildStep.PreBuild. Not intended for 插件 to implement. After Dalamud.接口.ManagedFontAtlas.FontAtlasBuildStepDelegate returns, either Dalamud.接口.ManagedFontAtlas.IFontAtlasBuildToolkit.Font must be set, or at least one font must have been added to the atlas using one of AddFont... 函数.
+在构建状态为 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStep.PreBuild 时使用的工具包。并不打算供插件实现。在 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStepDelegate 返回后，必须设置 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkit.Font，或者至少必须使用 AddFont... 函数之一向图集添加一个字体。
 
 ### IFontHandle​
 
-表示 a reference counting 处理 for fonts Not intended for 插件 to implement
+表示字体的引用计数句柄。并不打算供插件实现。
 
 ### ILockedImFont​
 
-The wrapper for Dalamud.Bindings.ImGui.ImFontPtr, guaranteeing that the associated 数据 will be available as long as this 结构体 is not disposed. Not intended for 插件 to implement.
+Dalamud.Bindings.ImGui.ImFontPtr 的包装器，保证只要该结构未被释放，相关数据将可用。并不打算供插件实现。
 
 ## 枚举
 
 ### FontAtlasAutoRebuildMode​
 
-How to rebuild Dalamud.接口.ManagedFontAtlas.IFontAtlas.
+如何重建 Dalamud.Interface.ManagedFontAtlas.IFontAtlas。
 
 ### FontAtlasBuildStep​
 
-Build step for Dalamud.接口.ManagedFontAtlas.IFontAtlas.
+Dalamud.Interface.ManagedFontAtlas.IFontAtlas 的构建步骤。
 
 ### FontScaleMode​
 
-指定 how should global font scale affect a font
+指定全局字体缩放应如何影响字体。
 
 ## 委托
 
 ### FontAtlasBuildStepDelegate​
 
-委托 to be called when a font needs to be built.
+当需要构建字体时调用的委托。
 
 ### IFontHandle.ImFontChangedDelegate​
 
-Dalamud.接口.ManagedFontAtlas.IFontHandle.ImFontChanged 的委托
+用于 Dalamud.Interface.ManagedFontAtlas.IFontHandle.ImFontChanged 的委托。
 

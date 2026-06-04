@@ -11,19 +11,19 @@ sidebar_label: "Dalamud.Game"
 
 ### BaseAddressResolver​
 
-Base 内存 address resolver.
+基本内存地址解析器。
 
 ### SigScanner​
 
-A SigScanner facilitates searching for 内存 signatures in a given ProcessModule.
+SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ## 枚举
 
 ### ActionKind​
 
-枚举 describing possible action kinds.
+描述可能的动作种类的枚举。
 
 ### ClientLanguage​
 
-枚举 describing the language the game loads in.
+描述游戏加载的语言的枚举。
 

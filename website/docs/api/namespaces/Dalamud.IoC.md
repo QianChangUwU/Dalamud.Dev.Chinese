@@ -11,9 +11,9 @@ sidebar_label: "Dalamud.IoC"
 
 ### PluginInterfaceAttribute​
 
-This 特性 indicates whether the decorated 类 should be exposed to 插件 via IoC.
+此属性指示被装饰的类是否应通过 IoC 暴露给插件。
 
 ### PluginServiceAttribute​
 
-This 特性 indicates whether an applicable 服务 should be injected into the 插件.
+此属性指示是否应将适用的服务注入到插件中。
 

@@ -17,7 +17,7 @@ sidebar_label: "Dalamud.Game.ClientState.Fates"
 
 ### IFate​
 
-表示 a FATE entry that can be seen in the current area 的接口
+表示当前区域内可见的命运条目的接口。
 
 ## 枚举
 

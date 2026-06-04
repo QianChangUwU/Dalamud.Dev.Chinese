@@ -11,33 +11,33 @@ sidebar_label: "Dalamud.Plugin.Ipc.Exceptions"
 
 ### DataCacheCreationError​
 
-This exception is thrown when a null value is provided for a 数据 cache or it does not implement the expected 类型.
+当为数据缓存提供空值或未实现预期类型时，将抛出此异常。
 
 ### DataCacheTypeMismatchError​
 
-This exception is thrown when a 数据 cache is accessed with the wrong 类型.
+当以错误类型访问数据缓存时，将抛出此异常。
 
 ### DataCacheValueNullError​
 
-This exception is thrown when a null value is provided for a 数据 cache or it does not implement the expected 类型.
+当为数据缓存提供空值或未实现预期类型时，将抛出此异常。
 
 ### IpcError​
 
-This exception is thrown when an IPC errors are encountered.
+当遇到IPC错误时，将抛出此异常。
 
 ### IpcLengthMismatchError​
 
-This exception is thrown when an IPC 方法 is invoked and the number of 类型 does not match what was previously registered.
+当调用IPC方法时，如果类型数量与之前注册的不匹配，将抛出此异常。
 
 ### IpcNotReadyError​
 
-This exception is thrown when an IPC 方法 is invoked, but no actions or funcs have been registered yet.
+当调用IPC方法时，如果尚未注册任何操作或函数，将抛出此异常。
 
 ### IpcTypeMismatchError​
 
-This exception is thrown when an IPC 方法 is checked out, but the 类型 does not match what was previously registered.
+当检查出IPC方法时，如果类型与之前注册的不匹配，将抛出此异常。
 
 ### IpcValueNullError​
 
-This exception is thrown when a null value is passed to an IPC requiring a value 类型.
+当将空值传递给需要值类型的IPC时，将抛出此异常。
 

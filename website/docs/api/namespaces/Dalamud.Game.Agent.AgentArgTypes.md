@@ -11,21 +11,21 @@ sidebar_label: "Dalamud.Game.Agent.AgentArgTypes"
 
 ### AgentArgs​
 
-AgentLifecycle AgentArgTypes 的基类
+AgentLifecycle AgentArgTypes 的基类。
 
 ### AgentClassJobChangeArgs​
 
-Agent argument 数据 for game 事件.
+游戏事件的代理参数数据。
 
 ### AgentGameEventArgs​
 
-Agent argument 数据 for game 事件.
+游戏事件的代理参数数据。
 
 ### AgentLevelChangeArgs​
 
-Agent argument 数据 for game 事件.
+游戏事件的代理参数数据。
 
 ### AgentReceiveEventArgs​
 
-Agent argument 数据 for ReceiveEvent 事件.
+ReceiveEvent 事件的代理参数数据。
 

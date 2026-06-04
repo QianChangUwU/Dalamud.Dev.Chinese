@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Support"
 
 ### Troubleshooting​
 
-类 responsible for printing troubleshooting information to the log.
+负责将故障排除信息打印到日志的类。
 

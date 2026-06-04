@@ -11,71 +11,71 @@ sidebar_label: "Dalamud.Game.Text.SeStringHandling.Payloads"
 
 ### AutoTranslatePayload​
 
-An SeString Payload containing an auto-translation/completion 聊天消息.
+一个包含自动翻译/补全聊天消息的 SeString 负载。
 
 ### DalamudLinkPayload​
 
-此类表示 a custom Dalamud clickable 聊天 link
+这个类表示一个自定义的 Dalamud 可点击聊天链接。
 
 ### EmphasisItalicPayload​
 
-An SeString Payload containing information about enabling or disabling italics formatting on following text.
+一个包含关于启用或禁用后续文本斜体格式的信息的 SeString 负载。
 
 ### IconPayload​
 
-SeString payload representing a bitmap icon from fontIcon.
+表示来自 fontIcon 的位图图标的 SeString 负载。
 
 ### ItemPayload​
 
-An SeString Payload representing an interactable item link.
+一个表示可交互物品链接的 SeString 负载。
 
 ### MapLinkPayload​
 
-An SeString Payload representing an interactable map position link.
+一个表示可交互地图位置链接的 SeString 负载。
 
 ### NewLinePayload​
 
-A wrapped newline 角色.
+一个包装的换行符。
 
 ### PartyFinderPayload​
 
-An SeString Payload representing an interactable 队伍 finder link.
+一个表示可交互的寻组链接的 SeString 负载。
 
 ### PlayerPayload​
 
-An SeString Payload representing a 玩家 link.
+一个表示玩家链接的 SeString 负载。
 
 ### QuestPayload​
 
-An SeString Payload representing an interactable quest link.
+一个表示可交互任务链接的 SeString 负载。
 
 ### RawPayload​
 
-An SeString Payload representing unhandled raw payload 数据. Mainly useful for constructing unhandled hardcoded payloads, or forwarding any unknown payloads without modification.
+一个表示未处理的原始负载数据的 SeString 负载。主要用于构建未处理的硬编码负载，或转发任何未知负载而不进行修改。
 
 ### SeHyphenPayload​
 
-A wrapped '–'.
+一个包装的 '–'。
 
 ### StatusPayload​
 
-An SeString Payload representing an interactable 状态 link.
+一个表示可交互状态链接的 SeString 负载。
 
 ### TextPayload​
 
-An SeString Payload representing a plain text string.
+一个表示普通文本字符串的 SeString 负载。
 
 ### UIForegroundPayload​
 
-An SeString Payload that allows text to have a specific color. The color selected will be determined by the Lumina.Excel.Sheets.UIColor.Dark theme's coloring, regardless of the active theme.
+一个允许文本具有特定颜色的 SeString 负载。所选颜色将由 Lumina.Excel.Sheets.UIColor.Dark 主题的着色决定，无论当前主题如何。
 
 ### UIGlowPayload​
 
-An SeString Payload that allows text to have a specific edge glow. The color selected will be determined by the Lumina.Excel.Sheets.UIColor.Light theme's coloring, regardless of the active theme.
+一个允许文本具有特定边缘发光的 SeString 负载。所选颜色将由 Lumina.Excel.Sheets.UIColor.Light 主题的着色决定，无论当前主题如何。
 
 ## 枚举
 
 ### PartyFinderPayload.PartyFinderLinkType​
 
-表示 the flags in a 队伍 finder link
+表示寻组链接中的标志。
 

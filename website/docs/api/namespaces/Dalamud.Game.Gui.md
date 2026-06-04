@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Game.Gui"
 
 ### HoveredAction​
 
-此类表示 the hotbar action currently hovered over by the cursor
+此类表示当前光标悬停的热键栏动作。
 
 ## 枚举
 

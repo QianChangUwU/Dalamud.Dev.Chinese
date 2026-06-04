@@ -11,15 +11,15 @@ sidebar_label: "Dalamud.Interface.Textures.TextureWraps"
 
 ### ForwardingTextureWrap​
 
-implementations of Dalamud.接口.Textures.TextureWraps.IDalamudTextureWrap that forwards to another 的基类
+用于实现 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的基类，该类转发到另一个。
 
 ## 接口
 
 ### IDalamudTextureWrap​
 
-Base TextureWrap 接口 for all Dalamud-owned texture wraps. Used to avoid referencing ImGuiScene.
+所有 Dalamud 拥有的纹理包装的基本 TextureWrap 接口。用于避免引用 ImGuiScene。
 
 ### IDrawListTextureWrap​
 
-A texture wrap that can be drawn using ImGui draw 数据.
+可以使用 ImGui 绘制数据绘制的纹理包装。
 

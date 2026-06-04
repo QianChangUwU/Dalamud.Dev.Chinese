@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.Text"
 
 ### SeIconCharExtensions​
 
-Dalamud.Game.Text.SeIconChar 的扩展方法
+Dalamud.Game.Text.SeIconChar 的扩展方法。
 
 ### XivChatEntry​
 
-此类表示 a single 聊天 log entry
+此类表示单个聊天日志条目。
 
 ### XivChatRelationKindConversions​
 
@@ -23,17 +23,17 @@ Dalamud.Game.Text.SeIconChar 的扩展方法
 
 ### XivChatTypeExtensions​
 
-the Dalamud.Game.Text.XivChatType 类型 的扩展方法
+Dalamud.Game.Text.XivChatType 类型的扩展方法。
 
 ### XivChatTypeInfoAttribute​
 
-Storage for relevant information associated with the 聊天 类型.
+存储与聊天类型相关的信息。
 
 ## 枚举
 
 ### SeIconChar​
 
-Special unicode 角色 with game-related symbols that work both 游戏内 and in any Dalamud window.
+具有游戏相关符号的特殊 Unicode 字符，可在游戏内和任何 Dalamud 窗口中使用。
 
 ### XivChatRelationKind​
 
@@ -41,5 +41,5 @@ Special unicode 角色 with game-related symbols that work both 游戏内 and in
 
 ### XivChatType​
 
-The FFXIV 聊天 类型 as seen in the LogKind excel sheet.
+在 LogKind Excel 表中看到的 FFXIV 聊天类型。
 

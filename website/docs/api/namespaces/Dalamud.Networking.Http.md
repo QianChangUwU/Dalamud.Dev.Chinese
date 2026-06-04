@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Networking.Http"
 
 ### HappyEyeballsCallback​
 
-A 类 to provide a 系统.Net.Http.SocketsHttpHandler.ConnectCallback 方法 to implement a variant of the Happy Eyeballs algorithm for HTTP connections to dual-stack servers.
+一个类，提供 System.Net.Http.SocketsHttpHandler.ConnectCallback 方法，以实现针对双栈服务器的 HTTP 连接的 Happy Eyeballs 算法变体。
 

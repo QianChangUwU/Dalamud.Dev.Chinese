@@ -15,17 +15,17 @@ sidebar_label: "Dalamud.Game.Chat"
 
 ### IHandleableChatMessage​
 
-表示 a 聊天消息 that can be handled by a 插件 的接口
+表示可以由插件处理的聊天消息的接口。
 
 ### ILogMessage​
 
-表示 a log message 的接口
+表示日志消息的接口。
 
 ### ILogMessageEntity​
 
-表示 an entity related to a log message 的接口
+表示与日志消息相关的实体的接口。
 
 ### IMutableChatMessage​
 
-表示 a 聊天消息 that can be modified by a 插件 的接口
+表示可以被插件修改的聊天消息的接口。
 

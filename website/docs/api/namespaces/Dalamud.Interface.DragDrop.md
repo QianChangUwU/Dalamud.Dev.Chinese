@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.DragDrop"
 
 ### IDragDropManager​
 
-A 服务 to 处理 external drag and drop from WinAPI.
+处理来自 WinAPI 的外部拖放的服务。
 

@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Utility.Numerics"
 
 ### VectorExtensions​
 
-vectors 的扩展方法
+向量的扩展方法。
 

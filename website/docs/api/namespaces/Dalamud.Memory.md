@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Memory"
 
 ### MemoryHelper​
 
-A simple 类 that provides read/write access to arbitrary 内存.
+一个简单的类，提供对任意内存的读/写访问。
 
 ## 枚举
 
 ### MemoryProtection​
 
-PAGE_* from memoryapi.
+来自 memoryapi 的 PAGE_*。
 

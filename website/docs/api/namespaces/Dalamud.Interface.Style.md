@@ -15,9 +15,9 @@ sidebar_label: "Dalamud.Interface.Style"
 
 ### StyleModel​
 
-Superclass for all versions of the Dalamud style model.
+所有版本的 Dalamud 样式模型的超类。
 
 ### StyleModelV1​
 
-Version one of the Dalamud style model.
+Dalamud 样式模型的版本一。
 

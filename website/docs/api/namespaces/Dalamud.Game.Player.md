@@ -17,7 +17,7 @@ sidebar_label: "Dalamud.Game.Player"
 
 ### MentorVersion​
 
-指定 the mentor certification version for a 玩家
+指定玩家的导师认证版本。
 
 ### PlayerAttribute​
 
@@ -25,5 +25,5 @@ sidebar_label: "Dalamud.Game.Player"
 
 ### Sex​
 
-表示 the sex of a 角色
+表示角色的性别。
 

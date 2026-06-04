@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Hooking.Internal.Verification"
 
 ### HookVerificationException​
 
-Exception thrown when a provided 委托 for a Hook does not match a known 委托.
+当提供的钩子委托与已知委托不匹配时抛出的异常。
 

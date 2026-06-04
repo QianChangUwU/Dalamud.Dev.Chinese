@@ -11,9 +11,9 @@ sidebar_label: "Dalamud.Interface.Animation"
 
 ### AnimUtil​
 
-类 providing 辅助 函数 when facilitating animations.
+提供在动画过程中辅助功能的类。
 
 ### Easing​
 
-Base 类 facilitating the implementation of easing 函数.
+促进缓动函数实现的基类。
 

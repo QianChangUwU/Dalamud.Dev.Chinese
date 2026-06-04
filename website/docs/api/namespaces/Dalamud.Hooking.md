@@ -11,21 +11,21 @@ sidebar_label: "Dalamud.Hooking"
 
 ### AsmHook​
 
-管理 a Hook which can be used to intercept a call to 原生 函数 This 类 is basically a thin wrapper around the LocalHook 类型 to provide 辅助 函数
+管理一个可以用于拦截对本地函数调用的钩子。这个类基本上是对 LocalHook 类型的一个薄包装，以提供辅助函数。
 
 ### Hook&lt;T&gt;​
 
-管理 a Hook which can be used to intercept a call to 原生 函数 This 类 is basically a thin wrapper around the LocalHook 类型 to provide 辅助 函数
+管理一个可以用于拦截对本地函数调用的钩子。这个类基本上是对 LocalHook 类型的一个薄包装，以提供辅助函数。
 
 ## 接口
 
 ### IDalamudHook​
 
-接口 describing a generic Hook.
+描述通用钩子的接口。
 
 ## 枚举
 
 ### AsmHookBehaviour​
 
-定义 the behaviour used by the Dalamud.Hook.AsmHook This is equivalent to the same enumeration in Reloaded and is included so you do not have to reference the assembly
+定义 Dalamud.Hooking.AsmHook 使用的行为。这与 Reloaded 中的相同枚举相当，并且包含在内，以便您不必引用该程序集。
 

@@ -11,19 +11,19 @@ sidebar_label: "Dalamud.Interface.ImGuiFileDialog"
 
 ### FileDialog​
 
-A file or folder picker.
+文件或文件夹选择器。
 
 ### FileDialogManager​
 
-A 管理器 for the Dalamud.接口.ImGuiFileDialog.FileDialog 类.
+Dalamud.Interface.ImGuiFileDialog.FileDialog 类的管理器。
 
 ## 枚举
 
 ### FileDialog.SortingField​
 
-The sorting 类型 of the file selector.
+文件选择器的排序类型。
 
 ### ImGuiFileDialogFlags​
 
-设置 flags for the Dalamud.接口.ImGuiFileDialog.FileDialog 类.
+Dalamud.Interface.ImGuiFileDialog.FileDialog 类的设置标志。
 

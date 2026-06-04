@@ -11,37 +11,37 @@ sidebar_label: "Dalamud.Interface.Textures"
 
 ### DalamudTextureWrapExtensions​
 
-Dalamud.接口.Textures.TextureWraps.IDalamudTextureWrap 的扩展方法
+用于 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的扩展方法。
 
 ### ForwardingSharedImmediateTexture​
 
-Wraps a Dalamud texture allowing interoperability with certain 服务. Only use this if you need to provide a texture that has been created or rented as a ISharedImmediateTexture.
+包装一个 dalamud 纹理，允许与某些服务的互操作性。仅在需要提供作为 ISharedImmediateTexture 创建或租用的纹理时使用。
 
 ## 结构体
 
 ### GameIconLookup​
 
-表示 a lookup for a game icon
+表示游戏图标的查找。
 
 ### ImGuiViewportTextureArgs​
 
-Describes how to take a texture of an existing ImGui viewport.
+描述如何获取现有 ImGui 视口的纹理。
 
 ### RawImageSpecification​
 
-Describes a raw image.
+描述一个原始图像。
 
 ### TextureModificationArgs​
 
-Describes how to modify a texture.
+描述如何修改纹理。
 
 ## 接口
 
 ### IBitmapCodecInfo​
 
-表示 an available bitmap codec
+表示一个可用的位图编解码器。
 
 ### ISharedImmediateTexture​
 
-A texture with a backing instance of Dalamud.接口.Textures.TextureWraps.IDalamudTextureWrap that is shared across multiple requesters.
+一个具有 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 背后实例的纹理，该实例在多个请求者之间共享。
 

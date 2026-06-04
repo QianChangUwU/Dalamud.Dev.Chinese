@@ -11,13 +11,13 @@ sidebar_label: "Dalamud.Utility.Timing"
 
 ### TimingEvent​
 
-类 representing a timing 事件.
+表示计时事件的类。
 
 ### TimingHandle​
 
-类 used for tracking a time interval taken.
+用于跟踪所用时间间隔的类。
 
 ### Timings​
 
-类 for measuring time taken in various subsystems.
+用于测量各个子系统中所用时间的类。
 

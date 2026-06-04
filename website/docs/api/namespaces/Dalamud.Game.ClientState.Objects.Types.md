@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.ClientState.Objects.Types"
 
 ### IBattleChara​
 
-表示 a battle 角色 的接口
+表示战斗角色的接口。
 
 ### IBattleNpc​
 
-A 接口 that represents a battle NPC.
+表示战斗NPC的接口。
 
 ### ICharacter​
 

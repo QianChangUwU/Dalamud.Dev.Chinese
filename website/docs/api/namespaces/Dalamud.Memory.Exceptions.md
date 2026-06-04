@@ -11,21 +11,21 @@ sidebar_label: "Dalamud.Memory.Exceptions"
 
 ### MemoryAllocationException​
 
-An exception thrown when VirtualAlloc fails.
+当 VirtualAlloc 失败时抛出的异常。
 
 ### MemoryException​
 
-The base exception when thrown from Dalamud.内存.
+从 Dalamud.Memory 抛出的基本异常。
 
 ### MemoryPermissionException​
 
-An exception thrown when VirtualProtect fails.
+当 VirtualProtect 失败时抛出的异常。
 
 ### MemoryReadException​
 
-An exception thrown when ReadProcessMemory fails.
+当 ReadProcessMemory 失败时抛出的异常。
 
 ### MemoryWriteException​
 
-An exception thrown when WriteProcessMemory fails.
+当 WriteProcessMemory 失败时抛出的异常。
 

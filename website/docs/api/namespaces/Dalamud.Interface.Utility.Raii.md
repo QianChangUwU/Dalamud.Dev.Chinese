@@ -19,27 +19,27 @@ sidebar_label: "Dalamud.Interface.Utility.Raii"
 
 ### ImRaii.DisabledDisposable​
 
-A wrapper around disabled state.
+禁用状态的包装器。
 
 ### ImRaii.EnabledDisposable​
 
-A wrapper around re-enabling the state.
+重新启用状态的包装器。
 
 ### ImRaii.FontDisposable​
 
-A wrapper around pushing fonts.
+推送字体的包装器。
 
 ### ImRaii.IdDisposable​
 
-A wrapper around ID pushing.
+ID 推送的包装器。
 
 ### ImRaii.IndentDisposable​
 
-A wrapper around indentation.
+缩进的包装器。
 
 ### ImRaii.ItemWidthDisposable​
 
-A wrapper around pushing item widths.
+推送项目宽度的包装器。
 
 ### ImRaii.PlotColorDisposable​
 
@@ -47,111 +47,111 @@ A wrapper around pushing item widths.
 
 ### ImRaii.PlotStyleDisposable​
 
-A wrapper around style pushing.
+样式推送的包装器。
 
 ### ImRaii.StyleDisposable​
 
-A wrapper around style pushing.
+样式推送的包装器。
 
 ### ImRaii.TextWrapDisposable​
 
-A wrapper around pushing text wrap positions.
+推送文本换行位置的包装器。
 
 ## 结构体
 
 ### ImRaii.ChildDisposable​
 
-A wrapper around ImGui child windows.
+ImGui 子窗口的包装器。
 
 ### ImRaii.ChildFrameDisposable​
 
-A wrapper around ImGui child frame.
+ImGui 子框架的包装器。
 
 ### ImRaii.ColumnsDisposable​
 
-A wrapper around creating pre-table style column separation.
+创建表格前样式列分隔的包装器。
 
 ### ImRaii.ComboDisposable​
 
-A wrapper around creating pre-table style column separation.
+创建表格前样式列分隔的包装器。
 
 ### ImRaii.DragDropSourceDisposable​
 
-A wrapper around a ImGui Drag and Drop Source.
+ImGui 拖放源的包装器。
 
 ### ImRaii.DragDropTargetDisposable​
 
-A wrapper around a ImGui Drag and Drop Target.
+ImGui 拖放目标的包装器。
 
 ### ImRaii.GroupDisposable​
 
-A wrapper around ImGui groups.
+ImGui 组的包装器。
 
 ### ImRaii.HeaderDisposable​
 
-A wrapper around ImGui collapsing headers that also push an ID.
+同时推送 ID 的 ImGui 折叠标题的包装器。
 
 ### ImRaii.ListBoxDisposable​
 
-A wrapper around ImGui list boxes.
+ImGui 列表框的包装器。
 
 ### ImRaii.MainMenuBarDisposable​
 
-A wrapper around ImGui main menu bars.
+ImGui 主菜单栏的包装器。
 
 ### ImRaii.MenuBarDisposable​
 
-A wrapper around ImGui menu bars.
+ImGui 菜单栏的包装器。
 
 ### ImRaii.MenuDisposable​
 
-A wrapper around ImGui menus.
+ImGui 菜单的包装器。
 
 ### ImRaii.PlotAlignedDisposable​
 
-A wrapper around ImPlots aligned plot.
+ImPlots 对齐图的包装器。
 
 ### ImRaii.PlotDisposable​
 
-A wrapper around ImPlots plot.
+ImPlots 图的包装器。
 
 ### ImRaii.PlotDragDropSourceDisposable​
 
-A wrapper around ImPlots drag and drop source.
+ImPlots 拖放源的包装器。
 
 ### ImRaii.PlotDragDropTargetDisposable​
 
-A wrapper around ImPlots drag and drop target.
+ImPlots 拖放目标的包装器。
 
 ### ImRaii.PlotLegendDisposable​
 
-A wrapper around ImPlots legend.
+ImPlots 图例的包装器。
 
 ### ImRaii.PlotSubDisposable​
 
-A wrapper around ImPlots plot sub.
+ImPlots 图子项的包装器。
 
 ### ImRaii.PopupDisposable​
 
-A wrapper around ImGui popups.
+ImGui 弹出窗口的封装。
 
 ### ImRaii.TabBarDisposable​
 
-A wrapper around ImGui tab bars.
+ImGui 标签栏的封装。
 
 ### ImRaii.TabItemDisposable​
 
-A wrapper around ImGui tab items.
+ImGui 标签项的封装。
 
 ### ImRaii.TableDisposable​
 
-A wrapper around ImGui tables.
+ImGui 表格的封装。
 
 ### ImRaii.TooltipDisposable​
 
-A wrapper around ImGui tooltips.
+ImGui 工具提示的封装。
 
 ### ImRaii.TreeNodeDisposable​
 
-A wrapper around ImGui tree nodes.
+ImGui 树节点的封装。
 

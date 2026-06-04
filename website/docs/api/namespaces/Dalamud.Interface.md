@@ -11,71 +11,71 @@ sidebar_label: "Dalamud.Interface"
 
 ### ColorHelpers​
 
-类 containing various 方法 for manipulating colors.
+包含各种颜色操作方法的类。
 
 ### FontAwesomeCategoriesAttribute​
 
-Set categories associated with a font awesome icon.
+设置与 Font Awesome 图标相关的类别。
 
 ### FontAwesomeExtensions​
 
-Dalamud.接口.FontAwesomeIcon 的扩展方法
+用于 Dalamud.Interface.FontAwesomeIcon 的扩展方法。
 
 ### FontAwesomeHelpers​
 
-类 containing various 辅助 方法 for use with Font Awesome inside Dalamud.
+包含在 Dalamud 中使用 Font Awesome 的各种辅助方法的类。
 
 ### FontAwesomeSearchTermsAttribute​
 
-Set search terms associated with a font awesome icon.
+设置与 Font Awesome 图标相关的搜索词。
 
 ### GlyphRangesJapanese​
 
-Unicode glyph ranges for the Japanese language.
+用于日语的 Unicode 字形范围。
 
 ### TitleScreenMenuEntry​
 
-类 representing an entry in the title screen menu.
+表示标题屏幕菜单中条目的类。
 
 ### UiBuilder​
 
-此类表示 the Dalamud UI that is drawn on top of the game It can be used to draw custom windows and overlays
+此类表示绘制在游戏顶部的 Dalamud UI。它可用于绘制自定义窗口和覆盖层。
 
 ### UldWrapper​
 
-Wrapper for multi-icon sprite sheets defined by ULD files.
+为由 ULD 文件定义的多图标精灵表的包装器。
 
 ## 结构体
 
 ### ColorHelpers.HsvaColor​
 
-A 结构体 representing a color using HSVA coordinates.
+表示使用 HSVA 坐标的颜色的结构体。
 
 ## 接口
 
 ### IReadOnlyTitleScreenMenuEntry​
 
-A 接口 representing a read only entry in the title screen menu.
+表示标题屏幕菜单中只读条目的接口。
 
 ### ITitleScreenMenuEntry​
 
-A 接口 representing an entry in the title screen menu.
+表示标题屏幕菜单中条目的接口。
 
 ### IUiBuilder​
 
-This 接口 represents the Dalamud UI that is drawn on top of the game. It can be used to draw custom windows and overlays.
+此接口表示绘制在游戏顶部的 Dalamud UI。它可用于绘制自定义窗口和覆盖层。
 
 ## 枚举
 
 ### FontAwesomeIcon​
 
-Font Awesome unicode 角色 for use with the Dalamud.接口.UiBuilder.IconFont font.
+用于 Dalamud.Interface.UiBuilder.IconFont 字体的 Font Awesome Unicode 字符。
 
 ### PluginInstallerOpenKind​
 
-枚举 describing pages the 插件 installer can be opened to.
+描述插件安装程序可以打开的页面的枚举。
 
 ### SettingsOpenKind​
 
-枚举 describing tabs the 设置 window can be opened to.
+描述设置窗口可以打开的选项卡的枚举。
 

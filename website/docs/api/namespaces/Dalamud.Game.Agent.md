@@ -15,17 +15,17 @@ sidebar_label: "Dalamud.Game.Agent"
 
 ### AgentLifecycleEventListener​
 
-This 类 is a 辅助 for tracking and invoking listener 委托.
+这个类是用于跟踪和调用监听器委托的助手。
 
 ## 枚举
 
 ### AgentArgsType​
 
-Enumeration for available AgentLifecycle arg 数据.
+可用的 AgentLifecycle 参数数据的枚举。
 
 ### AgentEvent​
 
-Enumeration for available AgentLifecycle 事件.
+可用的 AgentLifecycle 事件的枚举。
 
 ### AgentId​
 

@@ -11,17 +11,17 @@ sidebar_label: "Dalamud.Interface.ImGuiNotification"
 
 ### Notification​
 
-表示 a blueprint for a 通知
+表示通知的蓝图。
 
 ### NotificationUtilities​
 
-Utilities for implementing stuff under Dalamud.接口.ImGuiNotification.
+用于在 Dalamud.Interface.ImGuiNotification 下实现功能的工具。
 
 ## 接口
 
 ### IActiveNotification​
 
-表示 an active 通知
+表示一个活动的通知。
 
 ### INotification​
 
@@ -29,15 +29,15 @@ Utilities for implementing stuff under Dalamud.接口.ImGuiNotification.
 
 ### INotificationIcon​
 
-Icon source for Dalamud.接口.ImGuiNotification.INotification.
+Dalamud.Interface.ImGuiNotification.INotification 的图标来源。
 
 ## 枚举
 
 ### NotificationDismissReason​
 
-指定 the reason of dismissal for a 通知
+指定通知被关闭的原因。
 
 ### NotificationType​
 
-Possible 通知 类型.
+可能的通知类型。
 

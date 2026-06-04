@@ -11,29 +11,29 @@ sidebar_label: "Dalamud.Game.Gui.Dtr"
 
 ### DtrInteractionEvent​
 
-表示 an interaction 事件 from the DTR 系统
+表示来自 DTR 系统的交互事件。
 
 ## 接口
 
 ### IDtrBarEntry​
 
-表示 an entry in the 服务器信息栏 的接口
+表示服务器信息栏中条目的接口。
 
 ### IReadOnlyDtrBarEntry​
 
-表示 a read-only entry in the 服务器信息栏 的接口
+表示服务器信息栏中只读条目的接口。
 
 ## 枚举
 
 ### ClickModifierKeys​
 
-Modifier keys that can be held during a mouse click 事件.
+在鼠标点击事件中可以按住的修饰键。
 
 ### MouseClickType​
 
-An 枚举 representing the mouse click 类型.
+表示鼠标点击类型的枚举。
 
 ### MouseScrollDirection​
 
-Possible directions for scroll wheel 事件.
+滚轮事件的可能方向。
 

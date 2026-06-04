@@ -11,43 +11,43 @@ sidebar_label: "Dalamud.Interface.FontIdentifier"
 
 ### DalamudAssetFontAndFamilyId​
 
-表示 a font from Dalamud assets
+表示来自 Dalamud 资源的字体。
 
 ### DalamudDefaultFontAndFamilyId​
 
-表示 the default Dalamud font
+表示默认的 Dalamud 字体。
 
 ### GameFontAndFamilyId​
 
-表示 a font from the game
+表示来自游戏的字体。
 
 ### SingleFontSpec​
 
-表示 a user's choice of a single font
+表示用户选择的单一字体。
 
 ### SystemFontFamilyId​
 
-表示 a font from 系统
+表示来自系统的字体。
 
 ### SystemFontId​
 
-表示 a font installed in the 系统
+表示安装在系统中的字体。
 
 ## 接口
 
 ### IFontFamilyId​
 
-表示 a font family identifier Not intended for 插件 to implement
+表示字体系列标识符。并不打算供插件实现。
 
 ### IFontId​
 
-表示 a font identifier Not intended for 插件 to implement
+表示字体标识符。并不打算供插件实现。
 
 ### IFontSpec​
 
-表示 a user's choice of font(s) Not intended for 插件 to implement
+表示用户选择的字体。并不打算供插件实现。
 
 ### IObjectWithLocalizableName​
 
-表示 an 对象 with localizable names
+表示具有可本地化名称的对象。
 

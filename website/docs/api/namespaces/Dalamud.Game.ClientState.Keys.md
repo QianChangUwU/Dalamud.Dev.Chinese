@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.ClientState.Keys"
 
 ### VirtualKeyExtensions​
 
-Dalamud.Game.ClientState.Keys.VirtualKey 的扩展方法
+针对Dalamud.Game.ClientState.Keys.VirtualKey的扩展方法。
 
 ## 枚举
 
 ### VirtualKey​
 
-Virtual-key codes.
+虚拟键代码。
 

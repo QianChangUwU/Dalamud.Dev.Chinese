@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Configuration"
 
 ### PluginConfigurations​
 
-配置 to store 设置 for a Dalamud 插件.
+用于存储 dalamud 插件设置的配置。
 
 ## 接口
 
 ### IPluginConfiguration​
 
-配置 to store 设置 for a Dalamud 插件.
+用于存储 dalamud 插件设置的配置。
 

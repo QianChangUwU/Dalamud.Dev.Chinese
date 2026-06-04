@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.ImGuiNotification.Internal"
 
 ### NotificationSnapDirection​
 
-Where 通知 should snap to on the screen when they are shown.
+通知显示时应在屏幕上固定的位置。
 

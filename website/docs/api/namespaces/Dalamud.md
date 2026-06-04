@@ -19,7 +19,7 @@ Dalamud 系统的主入口点。
 
 ### SafeMemory​
 
-类 facilitating 安全内存访问.
+用于安全内存访问的类。
 
 ## 接口
 
@@ -31,15 +31,15 @@ Dalamud 系统的主入口点。
 
 ### DalamudAsset​
 
-指定 an asset that has been shipped as Dalamud 资源 Any asset can cease to exist at any point even if the 枚举 value exists Either ship your own assets or be prepared for errors
+指定作为 Dalamud 资产发布的资产。任何资产都可以在任何时候停止存在，即使枚举值存在。要么发布自己的资产，要么准备好处理错误。
 
 ## 委托
 
 ### EntryPoint.InitDelegate​
 
-A 委托 used during initialization of the CLR from Dalamud.Boot.
+在从 Dalamud.Boot 初始化 CLR 时使用的委托。
 
 ### Localization.LocalizationChangedDelegate​
 
-the Dalamud.本地化.LocalizationChanged 事件 that occurs when the language is changed 的委托
+用于 Dalamud.Localization.LocalizationChanged 事件的委托，该事件在语言更改时发生。
 

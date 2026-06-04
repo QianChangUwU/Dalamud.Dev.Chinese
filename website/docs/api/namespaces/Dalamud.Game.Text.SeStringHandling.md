@@ -11,37 +11,37 @@ sidebar_label: "Dalamud.Game.Text.SeStringHandling"
 
 ### Payload​
 
-此类表示 a parsed SeString payload
+这个类表示一个解析后的 SeString 负载。
 
 ### SeString​
 
-此类表示 a parsed SeString
+这个类表示一个解析后的 SeString。
 
 ### SeStringBuilder​
 
-辅助 类 to build SeStrings using a builder pattern.
+使用构建者模式构建 SeStrings 的辅助类。
 
 ## 接口
 
 ### ITextProvider​
 
-An 接口 binding for a payload that can provide readable Text.
+一个接口绑定，用于提供可读文本的负载。
 
 ## 枚举
 
 ### BitmapFontIcon​
 
-此类表示 special icons that can appear in 聊天 naturally or as IconPayloads
+这个类表示可以自然出现在聊天中或作为 IconPayloads 的特殊图标。
 
 ### Payload.EmbeddedInfoType​
 
-This represents the 类型 of embedded 信息 in a payload.
+这表示负载中嵌入信息的类型。
 
 ### Payload.SeStringChunkType​
 
-This represents the 类型 of payload and how it should be encoded.
+这表示负载的类型及其编码方式。
 
 ### PayloadType​
 
-All parsed 类型 of SeString payloads.
+所有解析后的 SeString 负载类型。
 

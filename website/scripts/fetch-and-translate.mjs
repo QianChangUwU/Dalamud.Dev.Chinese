@@ -77,8 +77,15 @@ function stripTrailingPunct(text) {
 
 function needsAI(text) {
   if (!/[a-zA-Z]/.test(text)) return false;
-  const ascii = (text.match(/[a-zA-Z]/g) || []).length;
-  return (ascii / Math.max(text.length, 1)) > 0.25;
+  // Look for English words of 3+ letters that aren't C# PascalCase identifiers
+  const engWords = text.match(/\b[a-zA-Z]{3,}\b/g) || [];
+  const unknownWords = engWords.filter(w =>
+    // Not fully uppercase (like FFXIV, DTR)
+    !(w === w.toUpperCase() && w.length > 1) &&
+    // Not a known C# type name (PascalCase starting with uppercase, rest mixed)
+    !(/^[A-Z]/.test(w) && /[a-z]/.test(w.slice(1)))
+  );
+  return unknownWords.length > 0;
 }
 
 function normalize(text) {
@@ -118,7 +125,7 @@ function translate(text, ns, section, name) {
   if (AI_PROVIDER && needsAI(result)) {
     const normKey = t.toLowerCase().replace(/\s+/g, ' ');
     if (!PENDING.has(normKey)) {
-      PENDING.set(normKey, { norm: t, dictResult: result, occurrences: [] });
+      PENDING.set(normKey, { norm: t, normKey, dictResult: result, occurrences: [] });
     }
     PENDING.get(normKey).occurrences.push({ ns, section, name });
   }
@@ -133,8 +140,8 @@ async function batchAiTranslate() {
 
   loadAiCache();
 
-  // Only translate entries not in cache
-  const toTranslate = [...PENDING.values()].filter(e => !AI_CACHE.has(e.norm));
+  // Only translate entries not in cache (cache key = lowercased text)
+  const toTranslate = [...PENDING.values()].filter(e => !AI_CACHE.has(e.normKey));
   if (toTranslate.length === 0) {
     console.log(`🤖 All ${PENDING.size} pending items already cached, skipping AI`);
     return;
@@ -190,7 +197,8 @@ ${JSON.stringify(batch, null, 2)}`;
       const parsed = JSON.parse(data.choices[0].message.content);
 
       for (const [orig, translated] of Object.entries(parsed)) {
-        AI_CACHE.set(orig, translated);
+        const cacheKey = orig.toLowerCase().replace(/\s+/g, ' ');
+        AI_CACHE.set(cacheKey, translated);
       }
 
       done += batch.length;

@@ -11,9 +11,9 @@ sidebar_label: "Dalamud.Game.Addon.Lifecycle"
 
 ### AddonArgsType​
 
-Enumeration for available AddonLifecycle arg 数据.
+可用的 AddonLifecycle arg 数据的枚举。
 
 ### AddonEvent​
 
-Enumeration for available AddonLifecycle 事件.
+可用的 AddonLifecycle 事件的枚举。
 

@@ -11,51 +11,51 @@ sidebar_label: "Dalamud.Plugin"
 
 ### ActivePluginsChangedEventArgs​
 
-包含 数据 about changes to the list of active 插件
+包含有关活动插件列表更改的数据。
 
 ### PluginUpdate​
 
-The result of checking for an update for a 插件, including the latest version if available, and the changelog if available.
+检查插件更新的结果，包括最新版本（如果可用）和变更日志（如果可用）。
 
 ## 接口
 
 ### IActivePluginsChangedEventArgs​
 
-包含 数据 about changes to the list of active 插件
+包含有关活动插件列表更改的数据。
 
 ### IAsyncDalamudPlugin​
 
-This 接口 represents a basic Dalamud 插件 that loads and unloads asynchronously. All 插件 have to implement either Dalamud.插件.IDalamudPlugin or Dalamud.插件.IAsyncDalamudPlugin.
+此接口表示一个基本的 Dalamud 插件，异步加载和卸载。所有插件必须实现 Dalamud.Plugin.IDalamudPlugin 或 Dalamud.Plugin.IAsyncDalamudPlugin。
 
 ### IDalamudPlugin​
 
-This 接口 represents a basic Dalamud 插件. All 插件 have to implement either Dalamud.插件.IDalamudPlugin or Dalamud.插件.IAsyncDalamudPlugin.
+此接口表示一个基本的Dalamud插件。所有插件必须实现Dalamud.Plugin.IDalamudPlugin或Dalamud.Plugin.IAsyncDalamudPlugin。
 
 ### IDalamudPluginInterface​
 
-This 接口 acts as an 接口 to various 对象 needed to interact with Dalamud and the game.
+此接口充当与Dalamud和游戏交互所需的各种对象的接口。
 
 ### IExposedPlugin​
 
-表示 an installed 插件 to be exposed to other 插件 的接口
+表示已安装插件的接口，以便向其他插件公开。
 
 ## 枚举
 
 ### PluginListInvalidationKind​
 
-Causes for a change to the 插件 list.
+插件列表更改的原因。
 
 ### PluginLoadReason​
 
-This 枚举 reflects reasons for loading a 插件.
+此枚举反映加载插件的原因。
 
 ## 委托
 
 ### IDalamudPluginInterface.ActivePluginsChangedDelegate​
 
-事件 that listen to changes to the list of active 插件 的委托
+用于监听活动插件列表更改的事件的委托。
 
 ### IDalamudPluginInterface.LanguageChangedDelegate​
 
-本地化 change with two-letter iso lang code 的委托
+用于本地化更改的委托，带有两位字母的ISO语言代码。
 

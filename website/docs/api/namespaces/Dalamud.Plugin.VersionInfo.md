@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Plugin.VersionInfo"
 
 ### IDalamudVersionInfo​
 
-接口 exposing various information related to Dalamud versioning.
+接口，暴露与 Dalamud 版本相关的各种信息。
 

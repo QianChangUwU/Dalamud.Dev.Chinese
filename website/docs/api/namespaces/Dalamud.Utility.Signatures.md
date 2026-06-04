@@ -11,23 +11,23 @@ sidebar_label: "Dalamud.Utility.Signatures"
 
 ### SignatureAttribute​
 
-The main way to use SignatureHelper. Apply this 特性 to any field/property that should make use of a signature. See the field documentation for more information.
+使用 SignatureHelper 的主要方式。将此属性应用于任何应该使用签名的字段/属性。有关更多信息，请参见字段文档。
 
 ### SignatureException​
 
-An exception for signatures.
+签名的异常。
 
 ## 枚举
 
 ### Fallibility​
 
-The fallibility of a signature.
+签名的易错性。
 
 ### ScanType​
 
-The 类型 of scan to perform with a signature.
+使用签名执行的扫描类型。
 
 ### SignatureUseFlags​
 
-Use flags for a signature 特性. This tells SignatureHelper how to use the result of the signature.
+用于签名属性的标志。这告诉 SignatureHelper 如何使用签名的结果。
 

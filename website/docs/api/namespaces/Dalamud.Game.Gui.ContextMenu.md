@@ -11,41 +11,41 @@ sidebar_label: "Dalamud.Game.Gui.ContextMenu"
 
 ### MenuItem​
 
-A menu item that can be added to a 右键菜单.
+可以添加到上下文菜单中的菜单项。
 
 ### MenuTarget​
 
-Dalamud.Game.Gui.ContextMenu.MenuArgs contexts Discriminated based on Dalamud.Game.Gui.ContextMenu.ContextMenuType 的基类
+Dalamud.Game.Gui.ContextMenu.MenuArgs 上下文的基类。根据 Dalamud.Game.Gui.ContextMenu.ContextMenuType 进行区分。
 
 ### MenuTargetDefault​
 
-Target information on a default 右键菜单.
+默认上下文菜单上的目标信息。
 
 ### MenuTargetInventory​
 
-Target information on an 背包 右键菜单.
+库存上下文菜单上的目标信息。
 
 ## 接口
 
 ### IMenuArgs​
 
-表示 a context menus args 的接口
+表示上下文菜单参数的接口。
 
 ### IMenuItem​
 
-表示 a menu item to be added to a 右键菜单 的接口
+表示要添加到上下文菜单中的菜单项的接口。
 
 ### IMenuItemClickedArgs​
 
-An 接口 representing the callback args used when a menu item is clicked.
+表示点击菜单项时使用的回调参数的接口。
 
 ### IMenuOpenedArgs​
 
-An 接口 representing the callback args used when a menu item is opened.
+表示打开菜单项时使用的回调参数的接口。
 
 ## 枚举
 
 ### ContextMenuType​
 
-The 类型 of 右键菜单. Each one has a different associated Dalamud.Game.Gui.ContextMenu.MenuTarget.
+上下文菜单的类型。每个都有不同的关联 Dalamud.Game.Gui.ContextMenu.MenuTarget。
 

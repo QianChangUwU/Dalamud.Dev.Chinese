@@ -11,17 +11,17 @@ sidebar_label: "Dalamud.Game.Command"
 
 ### CommandInfo​
 
-This 类 describes a registered 命令.
+此类描述一个已注册的命令。
 
 ## 接口
 
 ### IReadOnlyCommandInfo​
 
-表示 a registered 命令 的接口
+表示已注册命令的接口。
 
 ## 委托
 
 ### IReadOnlyCommandInfo.HandlerDelegate​
 
-The 函数 to be executed when the 命令 is dispatched.
+命令被调度时要执行的函数。
 

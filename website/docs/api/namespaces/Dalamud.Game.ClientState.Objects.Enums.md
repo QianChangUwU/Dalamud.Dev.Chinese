@@ -25,7 +25,7 @@ sidebar_label: "Dalamud.Game.ClientState.Objects.Enums"
 
 ### CustomizeIndex​
 
-This 枚举 describes the indices of the 外观数据 array.
+此枚举描述Customize数组的索引。
 
 ### ObjectKind​
 
@@ -33,5 +33,5 @@ This 枚举 describes the indices of the 外观数据 array.
 
 ### StatusFlags​
 
-枚举 describing possible 状态 flags.
+描述可能状态标志的枚举。
 

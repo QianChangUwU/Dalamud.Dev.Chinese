@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.Network.Structures.InfoProxy"
 
 ### CharacterData​
 
-Dalamud wrapper around a client structs FFXIVClientStructs.FFXIV.Client.UI.信息.InfoProxyCommonList.CharacterData.
+围绕客户端结构 FFXIVClientStructs.FFXIV.Client.UI.Info.InfoProxyCommonList.CharacterData 的 Dalamud 包装器。
 
 ### DisplayGroupConversions​
 

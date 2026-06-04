@@ -81,11 +81,11 @@ sidebar_label: "Dalamud.Game.ClientState.JobGauge.Enums"
 
 ### DeliriumStep​
 
-枚举 representing the current step of Delirium.
+表示Delirium当前步骤的枚举。
 
 ### DismissedFairy​
 
-SCH Dismissed fairy 类型.
+SCH解散的精灵类型。
 
 ### DrawType​
 
@@ -101,7 +101,7 @@ SCH Dismissed fairy 类型.
 
 ### Mudras​
 
-NIN Mudra 类型.
+NIN的Mudra类型。
 
 ### Nadi​
 
@@ -109,7 +109,7 @@ NIN Mudra 类型.
 
 ### PetGlam​
 
-SMN summoned pet glam 类型.
+SMN召唤的宠物外观类型。
 
 ### Sen​
 
@@ -125,9 +125,9 @@ SMN summoned pet glam 类型.
 
 ### SummonAttunement​
 
-枚举 representing the current attunement of a summoner.
+表示召唤师当前调和状态的枚举。
 
 ### SummonPet​
 
-SMN summoned pet 类型.
+SMN召唤的宠物类型。
 

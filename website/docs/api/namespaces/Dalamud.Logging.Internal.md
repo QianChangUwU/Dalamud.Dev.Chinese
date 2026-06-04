@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Logging.Internal"
 
 ### ModuleLog​
 
-类 offering various 方法 to allow for logging in Dalamud modules.
+提供各种方法以允许在 Dalamud 模块中进行日志记录的类。
 

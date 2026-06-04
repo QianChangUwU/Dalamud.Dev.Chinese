@@ -15,59 +15,59 @@ sidebar_label: "Dalamud.Interface.Utility"
 
 ### ImGuiExtensions​
 
-类 containing various 扩展 to ImGui, aiding with building custom widgets.
+包含对 ImGui 的各种扩展的类，帮助构建自定义小部件。
 
 ### ImGuiHelpers​
 
-类 containing various 辅助 方法 for use with ImGui inside Dalamud.
+包含在 Dalamud 内部与 ImGui 一起使用的各种辅助方法的类。
 
 ### ImGuiHelpers.HorizontalButtonGroup​
 
-类 辅助 for creating a horizontal button group.
+用于创建水平按钮组的类助手。
 
 ### ImGuiTable​
 
-Helpers for drawing tables.
+用于绘制表格的助手。
 
 ### ImVectorWrapper​
 
-工具 方法 for Dalamud.接口.工具.ImVectorWrapper1`.
+用于 Dalamud.Interface.Utility.ImVectorWrapper1` 的实用方法。
 
 ## 结构体
 
 ### BufferBackedImDrawData​
 
-封装 Dalamud.Bindings.ImGui.ImDrawData containing one Dalamud.Bindings.ImGui.ImDrawList 的包装器
+围绕 Dalamud.Bindings.ImGui.ImDrawData 的包装器，包含一个 Dalamud.Bindings.ImGui.ImDrawList。
 
 ### ImGuiHelpers.ImFontAtlasCustomRectReal​
 
-ImFontAtlasCustomRect the correct version.
+ImFontAtlasCustomRect 的正确版本。
 
 ### ImGuiHelpers.ImFontGlyphHotDataReal​
 
-ImFontGlyphHotData the correct version.
+ImFontGlyphHotData 的正确版本。
 
 ### ImGuiHelpers.ImFontGlyphReal​
 
-ImFontGlyph the correct version.
+ImFontGlyph 的正确版本。
 
 ### ImGuiId​
 
-表示 any 类型 of ImGui ID
+表示任何类型的 ImGui ID。
 
 ### ImVectorWrapper&lt;T&gt;​
 
-Wrapper for ImVector.
+ImVector 的包装器。
 
 ## 枚举
 
 ### ImGuiId.Type​
 
-Possible 类型 for an ImGui ID.
+ImGui ID 的可能类型。
 
 ## 委托
 
 ### ImVectorWrapper&lt;T&gt;.ImGuiNativeDestroyDelegate​
 
-Destroy callback for items.
+项目的销毁回调。
 

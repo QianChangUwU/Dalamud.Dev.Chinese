@@ -11,13 +11,13 @@ sidebar_label: "Dalamud.Console"
 
 ### IConsoleCommand​
 
-表示 a 命令 in the 控制台 的接口
+表示控制台中命令的接口。
 
 ### IConsoleEntry​
 
-表示 an entry in the 控制台 的接口
+表示控制台中条目的接口。
 
 ### IConsoleVariable&lt;T&gt;​
 
-表示 a variable in the 控制台 的接口
+表示控制台中变量的接口。
 

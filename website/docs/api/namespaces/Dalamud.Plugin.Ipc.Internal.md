@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Plugin.Ipc.Internal"
 
 ### DataCachePluginId​
 
-Stores the internal name and effective working ID of a 插件 accessing datashare.
+存储访问数据共享的插件的内部名称和有效工作ID。
 

@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.ClientState.Statuses"
 
 ### StatusList​
 
-此集合表示 the 状态效果 an actor is afflicted by
+此集合表示演员所受的状态效果。
 
 ## 接口
 

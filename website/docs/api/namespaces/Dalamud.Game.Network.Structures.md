@@ -11,67 +11,67 @@ sidebar_label: "Dalamud.Game.Network.Structures"
 
 ### MarketBoardCurrentOfferings​
 
-此类表示 the current market board offerings from a game 网络 数据包
+此类表示来自游戏网络数据包的当前市场板报价。
 
 ### MarketBoardCurrentOfferings.MarketBoardItemListing​
 
-此类表示 the current market board offering of a single item from the Dalamud.Game.网络.Structures.MarketBoardCurrentOfferings 网络 数据包
+此类表示来自 Dalamud.Game.Network.Structures.MarketBoardCurrentOfferings 网络数据包的单个物品的当前市场板报价。
 
 ### MarketBoardCurrentOfferings.MarketBoardItemListing.ItemMateria​
 
-This represents the materia slotted to an Dalamud.Game.网络.Structures.MarketBoardCurrentOfferings.MarketBoardItemListing.
+这表示插入到 Dalamud.Game.Network.Structures.MarketBoardCurrentOfferings.MarketBoardItemListing 的 materia。
 
 ### MarketBoardHistory​
 
-此类表示 the market board history from a game 网络 数据包
+此类表示来自游戏网络数据包的市场板历史记录。
 
 ### MarketBoardHistory.MarketBoardHistoryListing​
 
-此类表示 the market board history of a single item from the Dalamud.Game.网络.Structures.MarketBoardHistory 网络 数据包
+此类表示来自 Dalamud.Game.Network.Structures.MarketBoardHistory 网络数据包的单个物品的市场板历史记录。
 
 ### MarketBoardPurchase​
 
-表示 market board purchase information This message is received from the server when a purchase is made at a market board
+表示市场板购买信息。此消息在市场板上进行购买时从服务器接收。
 
 ### MarketBoardPurchaseHandler​
 
-表示 market board purchase information This message is sent from the client when a purchase is made at a market board
+表示市场板购买信息。此消息在市场板上进行购买时从客户端发送。
 
 ### MarketTaxRates​
 
-此类表示 the "Result Dialog" 数据包 This is also used e.g for reduction results but we only care about tax rates We can do that by checking the "Category" field
+此类表示 "结果对话框" 数据包。这也用于例如减税结果，但我们只关心税率。我们可以通过检查 "类别" 字段来做到这一点。
 
 ## 接口
 
 ### IItemMateria​
 
-An 接口 that represents the materia slotted to an Dalamud.Game.网络.Structures.IMarketBoardItemListing.
+表示插入到 Dalamud.Game.Network.Structures.IMarketBoardItemListing 的 materia 的接口。
 
 ### IMarketBoardCurrentOfferings​
 
-An 接口 that represents the current market board offerings.
+表示当前市场板报价的接口。
 
 ### IMarketBoardHistory​
 
-An 接口 that represents the market board history from the game.
+表示游戏中的市场板历史记录的接口。
 
 ### IMarketBoardHistoryListing​
 
-An 接口 that represents the market board history of a single item from Dalamud.Game.网络.Structures.IMarketBoardHistory.
+表示来自 Dalamud.Game.Network.Structures.IMarketBoardHistory 的单个物品的市场板历史记录的接口。
 
 ### IMarketBoardItemListing​
 
-An 接口 that represents the current market board offering of a single item from the Dalamud.Game.网络.Structures.IMarketBoardCurrentOfferings.
+表示来自 Dalamud.Game.Network.Structures.IMarketBoardCurrentOfferings 的单个物品的当前市场板报价的接口。
 
 ### IMarketBoardPurchase​
 
-An 接口 that represents market board purchase information. This message is received from the server when a purchase is made at a market board.
+表示市场板购买信息的接口。此消息在市场板上进行购买时从服务器接收。
 
 ### IMarketBoardPurchaseHandler​
 
-An 接口 that represents market board purchase information. This message is sent from the client when a purchase is made at a market board.
+表示市场板购买信息的接口。此消息在市场板上进行购买时从客户端发送。
 
 ### IMarketTaxRates​
 
-An 接口 that represents the tax rates received by the client when interacting with a retainer vocate.
+表示客户端在与保管人互动时接收到的税率的接口。
 

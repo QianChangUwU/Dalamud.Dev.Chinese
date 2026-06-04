@@ -11,17 +11,17 @@ sidebar_label: "Dalamud.Game.Text.Noun.Enums"
 
 ### EnglishArticleType​
 
-Article 类型 for Dalamud.Game.ClientLanguage.English.
+Dalamud.Game.ClientLanguage.English 的文章类型。
 
 ### FrenchArticleType​
 
-Article 类型 for Dalamud.Game.ClientLanguage.French.
+Dalamud.Game.ClientLanguage.French 的文章类型。
 
 ### GermanArticleType​
 
-Article 类型 for Dalamud.Game.ClientLanguage.German.
+Dalamud.Game.ClientLanguage.German 的文章类型。
 
 ### JapaneseArticleType​
 
-Article 类型 for Dalamud.Game.ClientLanguage.Japanese.
+Dalamud.Game.ClientLanguage.Japanese 的文章类型。
 

@@ -11,17 +11,17 @@ sidebar_label: "Dalamud.Storage.Assets"
 
 ### DalamudAssetExtensions​
 
-Dalamud.DalamudAsset 的扩展方法
+Dalamud.DalamudAsset 的扩展方法。
 
 ## 接口
 
 ### IDalamudAssetManager​
 
-Holds Dalamud Assets' handles hostage, so that they do not get closed while Dalamud is running. Also, attempts to load optional assets. Note on 系统.Diagnostics.Contracts.PureAttribute It will help you get notified if you discard the result of 函数, mostly likely because of a mistake. Think of C++ [[nodiscard]]. Also, like the intended meaning of the 特性, such 方法 will not have externally visible state changes.
+保持 Dalamud 资产的句柄为人质，以便在 Dalamud 运行时不会关闭它们。同时，尝试加载可选资产。关于 System.Diagnostics.Contracts.PureAttribute 的说明，它将帮助您在丢弃函数结果时收到通知，这很可能是由于错误。想想 C++ [[nodiscard]]。此外，像属性的预期含义一样，这些方法不会有外部可见的状态变化。
 
 ## 枚举
 
 ### DalamudAssetPurpose​
 
-Purposes of a Dalamud 资源.
+Dalamud 资产的用途。
 

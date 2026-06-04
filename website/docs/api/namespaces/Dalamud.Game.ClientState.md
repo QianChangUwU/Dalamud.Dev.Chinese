@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.ClientState"
 
 ### ZoneInitEventArgs​
 
-提供 事件数据 for when the game should initialize a zone
+提供游戏应该初始化区域时的事件数据。
 
 ## 结构体
 
 ### ZoneInitEventArgs.FestivalEntry​
 
-表示 an active Festival
+表示一个活跃的节日。
 

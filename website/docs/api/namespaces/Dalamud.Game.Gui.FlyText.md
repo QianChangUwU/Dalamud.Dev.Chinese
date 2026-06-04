@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.Gui.FlyText"
 
 ### FlyTextKind​
 
-枚举 of FlyTextKind values.
+FlyTextKind 值的枚举。
 

@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Hooking.Internal"
 
 ### Unhooker​
 
-A 类 which stores a copy of the bytes at a location which will be hooked in the future, such that those bytes can be restored later to "unhook" the 函数.
+一个类，存储将在未来被钩住的位置的字节副本，以便这些字节可以在稍后恢复以“解除钩子”该函数。
 

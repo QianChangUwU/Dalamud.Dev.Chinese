@@ -11,13 +11,13 @@ sidebar_label: "Dalamud.Interface.ImGuiBackend.Delegates"
 
 ### ImGuiBuildUiDelegate​
 
-委托 to be called when ImGui should be used to layout now.
+在需要使用 ImGui 进行布局时调用的委托。
 
 ### ImGuiNewInputFrameDelegate​
 
-委托 to be called on new input frame.
+在新的输入帧上调用的委托。
 
 ### ImGuiNewRenderFrameDelegate​
 
-委托 to be called on new render frame.
+在新的渲染帧上调用的委托。
 

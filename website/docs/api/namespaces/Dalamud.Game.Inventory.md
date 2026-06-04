@@ -17,13 +17,13 @@ sidebar_label: "Dalamud.Game.Inventory"
 
 ### GameInventoryItem​
 
-Dalamud wrapper around a ClientStructs InventoryItem.
+围绕 ClientStructs InventoryItem 的 Dalamud 包装器。
 
 ## 枚举
 
 ### GameInventoryEvent​
 
-类 representing a item's changelog state.
+表示物品变更日志状态的类。
 
 ### GameInventoryType​
 

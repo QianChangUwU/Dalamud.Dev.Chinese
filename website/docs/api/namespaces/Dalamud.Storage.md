@@ -11,9 +11,9 @@ sidebar_label: "Dalamud.Storage"
 
 ### FileReadException​
 
-Thrown if all read operations fail.
+如果所有读取操作失败，则抛出。
 
 ### ReliableFileStoragePluginScoped​
 
-插件-scoped VFS wrapper.
+插件范围的VFS包装器。
 

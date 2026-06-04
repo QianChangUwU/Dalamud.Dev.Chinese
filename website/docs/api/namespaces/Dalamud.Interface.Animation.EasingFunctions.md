@@ -11,61 +11,61 @@ sidebar_label: "Dalamud.Interface.Animation.EasingFunctions"
 
 ### InCirc​
 
-类 providing an "InCirc" easing animation.
+提供 "InCirc" 缓动动画的类。
 
 ### InCubic​
 
-类 providing an "InCubic" easing animation.
+提供 "InCubic" 缓动动画的类。
 
 ### InElastic​
 
-类 providing an "InElastic" easing animation.
+提供 "InElastic" 缓动动画的类。
 
 ### InOutCirc​
 
-类 providing an "InOutCirc" easing animation.
+提供 "InOutCirc" 缓动动画的类。
 
 ### InOutCubic​
 
-类 providing an "InOutCubic" easing animation.
+提供 "InOutCubic" 缓动动画的类。
 
 ### InOutElastic​
 
-类 providing an "InOutCirc" easing animation.
+提供 "InOutCirc" 缓动动画的类。
 
 ### InOutQuint​
 
-类 providing an "InOutQuint" easing animation.
+提供 "InOutQuint" 缓动动画的类。
 
 ### InOutSine​
 
-类 providing an "InOutSine" easing animation.
+提供 "InOutSine" 缓动动画的类。
 
 ### InQuint​
 
-类 providing an "InQuint" easing animation.
+提供 "InQuint" 缓动动画的类。
 
 ### InSine​
 
-类 providing an "InSine" easing animation.
+提供 "InSine" 缓动动画的类。
 
 ### OutCirc​
 
-类 providing an "OutCirc" easing animation.
+提供 "OutCirc" 缓动动画的类。
 
 ### OutCubic​
 
-类 providing an "OutCubic" easing animation.
+提供 "OutCubic" 缓动动画的类。
 
 ### OutElastic​
 
-类 providing an "OutElastic" easing animation.
+提供 "OutElastic" 缓动动画的类。
 
 ### OutQuint​
 
-类 providing an "OutQuint" easing animation.
+提供 "OutQuint" 缓动动画的类。
 
 ### OutSine​
 
-类 providing an "OutSine" easing animation.
+提供 "OutSine" 缓动动画的类。
 

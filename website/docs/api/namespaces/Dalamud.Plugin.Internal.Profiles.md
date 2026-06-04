@@ -11,23 +11,23 @@ sidebar_label: "Dalamud.Plugin.Internal.Profiles"
 
 ### ProfileModel​
 
-类 representing a profile.
+表示配置文件的类。
 
 ### ProfileModelV1​
 
-Version 1 of the profile model.
+配置文件模型的版本 1。
 
 ### ProfileModelV1.ProfileModelV1Character​
 
-类 representing a single 角色 in a profile. Only used for the EnableForCharacters startup policy.
+表示配置文件中单个角色的类。仅用于 EnableForCharacters 启动策略。
 
 ### ProfileModelV1.ProfileModelV1Plugin​
 
-类 representing a single 插件 in a profile.
+表示配置文件中单个插件的类。
 
 ## 枚举
 
 ### ProfileModelV1.ProfileStartupPolicy​
 
-枚举 representing the startup policy of a profile.
+表示配置文件启动策略的枚举。
 

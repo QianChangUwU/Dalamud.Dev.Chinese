@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.Colors"
 
 ### ImGuiColors​
 
-类 containing frequently used colors for easier reference.
+包含常用颜色以便于参考的类。
 

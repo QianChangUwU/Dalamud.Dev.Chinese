@@ -11,75 +11,75 @@ sidebar_label: "Dalamud.Plugin.Services"
 
 ### IAddonEventManager​
 
-服务提供者，用于 Addon 事件管理
+用于插件事件管理的服务提供者。
 
 ### IAddonLifecycle​
 
-此类为 游戏内 Addon lifecycles 提供事件
+此类提供游戏内插件生命周期的事件。
 
 ### IAetheryteList​
 
-此集合表示 可用传送点 in the 传送界面 的列表
+此集合表示传送窗口中可用的以太石列表。
 
 ### IAgentLifecycle​
 
-此类为 游戏内 Agent lifecycles 提供事件
+此类提供游戏内代理生命周期的事件。
 
 ### IBuddyList​
 
-此集合表示 the buddies present in your squadron or trust 队伍 It does not include the 本地玩家
+此集合表示您在中队或信任队伍中的伙伴。它不包括本地玩家。
 
 ### IChatGui​
 
-此类处理与 the 原生聊天界面 的交互
+此类处理与原生聊天用户界面的交互。
 
 ### IClientState​
 
-此类表示 the 游戏客户端 at the time of access 的状态
+此类表示访问时游戏客户端的状态。
 
 ### ICommandManager​
 
-此类管理 registered 游戏内斜杠命令
+此类管理注册的游戏内斜杠命令。
 
 ### ICondition​
 
-提供对 conditions (generally 玩家 state) You can check whether a 玩家 is in combat mounted etc 的访问
+提供对条件（通常是玩家状态）的访问。您可以检查玩家是否在战斗中、骑乘等。
 
 ### IConsole​
 
-提供用于 register 控制台命令 and variables 的函数
+提供注册控制台命令和变量的功能。
 
 ### IContextMenu​
 
-此类提供 interacting with 游戏右键菜单 的方法
+此类提供与游戏上下文菜单交互的方法。
 
 ### IDalamudService​
 
-Dalamud 服务 的标记接口
+Dalamud 服务的标记接口。
 
 ### IDataManager​
 
-此类为 Dalamud 内部功能 but can also be used by 插件 if needed 提供数据
+此类提供 Dalamud 内部功能的数据，但在需要时也可以被插件使用。
 
 ### IDtrBar​
 
-类 used to 接口 with the 服务器信息栏.
+用于与服务器信息栏接口的类。
 
 ### IDutyState​
 
-此类表示 the 当前所在副本 的状态
+此类表示当前占用任务的状态。
 
 ### IFateTable​
 
-此集合表示当前 available FATE 事件
+此集合表示当前可用的命运事件。
 
 ### IFlyTextGui​
 
-此类辅助 interacting with and creating 原生游戏内 "浮动战斗文本"
+此类促进与创建原生游戏内 "飞行文本" 的交互。
 
 ### IFramework​
 
-此类表示 原生游戏客户端框架 and grants access to various subsystems
+此类表示原生游戏客户端的框架，并授予对各种子系统的访问权限。
 
 ### IGameConfig​
 
@@ -87,241 +87,241 @@ Dalamud 服务 的标记接口
 
 ### IGameGui​
 
-A 类 handling many aspects of the 游戏内 UI.
+处理游戏内 UI 许多方面的类。
 
 ### IGameInteropProvider​
 
-服务负责创建 Hook
+负责创建钩子的服务。
 
 ### IGameInventory​
 
-此类为 the 游戏内背包 提供事件
+此类提供游戏内库存的事件。
 
 ### IGameLifecycle​
 
-类 offering cancellation tokens for common gameplay 事件.
+提供常见游戏事件的取消令牌的类。
 
 ### IGamepadState​
 
-公开 the game 手柄状态 to Dalamud Will block game's 手柄 input if Dalamud.Bindings.ImGui.ImGuiConfigFlags.NavEnableGamepad is set
+将游戏手柄状态暴露给 Dalamud。如果设置了 Dalamud.Bindings.ImGui.ImGuiConfigFlags.NavEnableGamepad，将阻止游戏的手柄输入。
 
 ### IJobGauges​
 
-此类转换 内存中的职业量谱数据 to structs
+此类将内存中的职业计量数据转换为结构体。
 
 ### IKeyState​
 
-封装 the 游戏按键状态缓冲区 which contains the pressed state for all 键盘按键 indexed by 虚拟键码 的包装器
+围绕游戏按键状态缓冲区的包装器，该缓冲区包含所有键盘键的按下状态，按虚拟 vkCode 索引。
 
 ### IMarketBoard​
 
-提供对 market board related 事件 as the client receives/sends them 的访问
+提供对市场板相关事件的访问，客户端在接收/发送时。
 
 ### INamePlateGui​
 
-类 used to modify the 数据 used when rendering 名牌.
+用于修改渲染姓名牌时使用的数据的类。
 
 ### INotificationManager​
 
-通知 provided by Dalamud using ImGui 的管理器
+使用 ImGui 提供的 Dalamud 通知的管理器。
 
 ### IObjectTable​
 
-此集合表示当前 spawned FFXIV 游戏对象
+此集合表示当前生成的 FFXIV 游戏对象。
 
 ### IPartyFinderGui​
 
-此类处理与 the 原生 PartyFinder window 的交互
+此类处理与原生 PartyFinder 窗口的交互。
 
 ### IPartyList​
 
-此集合表示 the actors present in your 队伍 or alliance
+此集合表示您队伍或联盟中的演员。
 
 ### IPlayerState​
 
-determining the players state 的接口
+用于确定玩家状态的接口。
 
 ### IPluginLog​
 
-An opinionated 服务 to 处理 logging for 插件.
+一个有见地的服务，用于处理插件的日志记录。
 
 ### IReliableFileStorage​
 
-服务 to interact with the file 系统, as a replacement for standard C# file I/O. Writes and reads using this 服务 are, to the best of our ability, atomic and reliable. All 数据 is synced to disk immediately and written to a database, additionally to files on disk. This means that in case of file corruption, 数据 can likely be recovered from the database. However, this also means that operations using this 服务 duplicate 数据 on disk, so we don't recommend performing large file operations. The 服务 will not permit files larger than Dalamud.插件.服务.IReliableFileStorage.MaxFileSizeBytes (64MB) to be written. Saved 配置 数据 using the Dalamud.配置.PluginConfigurations 类 uses this functionality implicitly.
+与文件系统交互的服务，作为标准 C# 文件 I/O 的替代。使用此服务的写入和读取在我们能力范围内是原子和可靠的。所有数据立即同步到磁盘并写入数据库，此外还写入磁盘上的文件。这意味着在文件损坏的情况下，数据可能可以从数据库中恢复。然而，这也意味着使用此服务的操作会在磁盘上重复数据，因此我们不建议执行大文件操作。该服务不允许写入大于 Dalamud.Plugin.Services.IReliableFileStorage.MaxFileSizeBytes (64MB) 的文件。使用 Dalamud.Configuration.PluginConfigurations 类保存的配置数据隐式使用此功能。
 
 ### ISelfTestRegistry​
 
-registering and unregistering self-test steps from 插件 的接口
+用于从插件注册和注销自测步骤的接口。
 
 ### ISeStringEvaluator​
 
-定义 a 服务 for retrieving localized text for various 游戏内 entities
+定义一个服务，用于检索各种游戏内实体的本地化文本。
 
 ### ISigScanner​
 
-A SigScanner facilitates searching for 内存 signatures in a given ProcessModule.
+SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### ITargetManager​
 
-Get and set various kinds of targets for the 玩家.
+获取和设置玩家的各种目标。
 
 ### ITextureProvider​
 
-服务 that grants you access to textures you may render via ImGui.
+提供访问您可以通过 ImGui 渲染的纹理的服务。
 
 ### ITextureReadbackProvider​
 
-服务 that grants you to read instances of Dalamud.接口.Textures.TextureWraps.IDalamudTextureWrap.
+提供读取 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 实例的服务。
 
 ### ITextureSubstitutionProvider​
 
-服务 that grants you the ability to replace texture 数据 that is to be loaded by Dalamud.
+提供替换将由 Dalamud 加载的纹理数据的能力的服务。
 
 ### ITitleScreenMenu​
 
-类 responsible for managing elements in the title screen menu 的接口
+负责管理标题屏幕菜单中元素的类的接口。
 
 ### IToastGui​
 
-此类辅助 interacting with and creating 原生 toast windows
+此类便于与本机通知窗口交互和创建。
 
 ### IUnlockState​
 
-determining unlock state of various content in the game 的接口
+用于确定游戏中各种内容解锁状态的接口。
 
 ## 枚举
 
 ### IGameInteropProvider.HookBackend​
 
-Available Hook backends.
+可用的钩子后端。
 
 ## 委托
 
 ### IAddonEventManager.AddonEventDelegate​
 
-委托 to be called when an 事件 is received.
+在接收到事件时调用的委托。
 
 ### IAddonLifecycle.AddonEventDelegate​
 
-receiving Addon 生命周期 事件 messages 的委托
+用于接收附加组件生命周期事件消息的委托。
 
 ### IAgentLifecycle.AgentEventDelegate​
 
-receiving agent lifecycle 事件 messages 的委托
+用于接收代理生命周期事件消息的委托。
 
 ### IChatGui.OnChatMessageDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IChatGui.ChatMessageHandled and Dalamud.插件.服务.IChatGui.ChatMessageUnhandled 事件.
+用于 Dalamud.Plugin.Services.IChatGui.ChatMessageHandled 和 Dalamud.Plugin.Services.IChatGui.ChatMessageUnhandled 事件的委托类型。
 
 ### IChatGui.OnHandleableChatMessageDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IChatGui.ChatMessage and Dalamud.插件.服务.IChatGui.CheckMessageHandled 事件.
+用于 Dalamud.Plugin.Services.IChatGui.ChatMessage 和 Dalamud.Plugin.Services.IChatGui.CheckMessageHandled 事件的委托类型。
 
 ### IChatGui.OnLogMessageDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IChatGui.LogMessage 事件.
+用于 Dalamud.Plugin.Services.IChatGui.LogMessage 事件的委托类型。
 
 ### IClientState.ClassJobChangeDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IClientState.ClassJobChanged 事件.
+用于 Dalamud.Plugin.Services.IClientState.ClassJobChanged 事件的委托类型。
 
 ### IClientState.LevelChangeDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IClientState.LevelChanged 事件.
+用于 Dalamud.Plugin.Services.IClientState.LevelChanged 事件的委托类型。
 
 ### IClientState.LogoutDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IClientState.Logout 事件.
+用于 Dalamud.Plugin.Services.IClientState.Logout 事件的委托类型。
 
 ### ICondition.ConditionChangeDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.ICondition.ConditionChange 事件.
+与 Dalamud.Plugin.Services.ICondition.ConditionChange 事件一起使用的委托类型。
 
 ### IContextMenu.OnMenuOpenedDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IContextMenu.OnMenuOpened 事件.
+用于 Dalamud.Plugin.Services.IContextMenu.OnMenuOpened 事件的委托类型。
 
 ### IDutyState.DutyCompletedDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IDutyState.DutyCompleted 事件.
+用于 Dalamud.Plugin.Services.IDutyState.DutyCompleted 事件的委托类型。
 
 ### IDutyState.DutyRecommencedDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IDutyState.DutyRecommenced 事件.
+用于 Dalamud.Plugin.Services.IDutyState.DutyRecommenced 事件的委托类型。
 
 ### IDutyState.DutyStartedDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IDutyState.DutyStarted 事件.
+用于 Dalamud.Plugin.Services.IDutyState.DutyStarted 事件的委托类型。
 
 ### IDutyState.DutyWipedDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IDutyState.DutyWiped 事件.
+用于 Dalamud.Plugin.Services.IDutyState.DutyWiped 事件的委托类型。
 
 ### IFlyTextGui.OnFlyTextCreatedDelegate​
 
-The 委托 defining the 类型 for the FlyText 事件.
+定义 FlyText 事件类型的委托。
 
 ### IFramework.OnUpdateDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IFramework.Update 事件.
+与 Dalamud.Plugin.Services.IFramework.Update 事件一起使用的委托类型。
 
 ### IGameInventory.InventoryChangedDelegate​
 
-委托 函数 to be called for each change to inventories. This 委托 sends individual 事件 for changes.
+在每次更改库存时调用的委托函数。此委托为更改发送单独的事件。
 
 ### IGameInventory.InventoryChangedDelegate&lt;T&gt;​
 
-委托 函数 to be called for each change to inventories. This 委托 sends individual 事件 for changes.
+在每次更改库存时调用的委托函数。此委托为更改发送单独的事件。
 
 ### IGameInventory.InventoryChangelogDelegate​
 
-委托 函数 to be called when inventories have been changed. This 委托 sends the entire set of changes recorded.
+在库存发生更改时调用的委托函数。此委托发送记录的所有更改。
 
 ### IMarketBoard.HistoryReceivedDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IMarketBoard.HistoryReceived 事件.
+用于 Dalamud.Plugin.Services.IMarketBoard.HistoryReceived 事件的委托类型。
 
 ### IMarketBoard.ItemPurchasedDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IMarketBoard.ItemPurchased 事件.
+用于 Dalamud.Plugin.Services.IMarketBoard.ItemPurchased 事件的委托类型。
 
 ### IMarketBoard.OfferingsReceivedDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IMarketBoard.OfferingsReceived 事件.
+用于 Dalamud.Plugin.Services.IMarketBoard.OfferingsReceived 事件的委托类型。
 
 ### IMarketBoard.PurchaseRequestedDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IMarketBoard.PurchaseRequested 事件.
+用于 Dalamud.Plugin.Services.IMarketBoard.PurchaseRequested 事件的委托类型。
 
 ### IMarketBoard.TaxRatesReceivedDelegate​
 
-A 委托 类型 used with the Dalamud.插件.服务.IMarketBoard.PurchaseRequested 事件.
+用于 Dalamud.Plugin.Services.IMarketBoard.PurchaseRequested 事件的委托类型。
 
 ### INamePlateGui.OnPlateUpdateDelegate​
 
-The 委托 used for receiving 名牌 update 事件.
+用于接收姓名板更新事件的委托。
 
 ### IPartyFinderGui.PartyFinderListingEventDelegate​
 
-事件 类型 fired each time the game receives an individual 队伍 Finder listing. Cannot modify listings but can hide them.
+每当游戏接收到单个派对寻找器列表时触发的事件类型。无法修改列表，但可以隐藏它们。
 
 ### ITextureSubstitutionProvider.TextureDataInterceptorDelegate​
 
-委托 describing a 函数 that may be used to intercept and replace texture 数据. The path assigned may point to another texture inside the game's dats, or a .tex file or image on the disk.
+描述一个可以用来拦截和替换纹理数据的函数的委托。分配的路径可以指向游戏数据中的另一个纹理，或磁盘上的 .tex 文件或图像。
 
 ### IToastGui.OnErrorToastDelegate​
 
-A 委托 类型 used when an error toast window appears.
+用于错误提示窗口出现时的委托类型。
 
 ### IToastGui.OnNormalToastDelegate​
 
-A 委托 类型 used when a normal toast window appears.
+用于普通提示窗口出现时的委托类型。
 
 ### IToastGui.OnQuestToastDelegate​
 
-A 委托 类型 used when a quest toast window appears.
+用于任务提示窗口出现时的委托类型。
 
 ### IUnlockState.UnlockDelegate​
 
-A 委托 类型 used for the Dalamud.插件.服务.IUnlockState.Unlock 事件.
+用于 Dalamud.Plugin.Services.IUnlockState.Unlock 事件的委托类型。
 

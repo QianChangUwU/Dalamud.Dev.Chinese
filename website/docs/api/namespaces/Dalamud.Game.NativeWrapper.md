@@ -17,19 +17,19 @@ sidebar_label: "Dalamud.Game.NativeWrapper"
 
 ### AgentInterfacePtr​
 
-A readonly wrapper for AgentInterface.
+AgentInterface 的只读包装器。
 
 ### AtkUnitBasePtr​
 
-A readonly wrapper for AtkUnitBase.
+AtkUnitBase 的只读包装器。
 
 ### AtkValuePtr​
 
-A readonly wrapper for AtkValue.
+AtkValue 的只读包装器。
 
 ### UIModulePtr​
 
-A readonly wrapper for UIModule.
+UIModule 的只读包装器。
 
 ## 枚举
 

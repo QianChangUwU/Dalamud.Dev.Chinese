@@ -11,35 +11,35 @@ sidebar_label: "Dalamud.Utility"
 
 ### ActionKindExtensions​
 
-the Dalamud.Game.ActionKind 枚举 的扩展方法
+Dalamud.Game.ActionKind 枚举的扩展方法。
 
 ### AsyncUtils​
 
-A set of utilities around and for better asynchronous behavior.
+一组围绕更好异步行为的实用工具。
 
 ### ClientLanguageExtensions​
 
-the Dalamud.Game.ClientLanguage 类 的扩展方法
+Dalamud.Game.ClientLanguage 类的扩展方法。
 
 ### CStringExtensions​
 
-A set of helpful utilities for working with InteropGenerator.Runtime.CStringPointers from ClientStructs.
+一组用于处理来自 ClientStructs 的 InteropGenerator.Runtime.CStringPointers 的有用工具。
 
 ### DateTimeSpanExtensions​
 
-工具 函数 for 系统.DateTime and 系统.TimeSpan.
+用于 System.DateTime 和 System.TimeSpan 的实用函数。
 
 ### DiagnosticUtil​
 
-A set of utilities for diagnostics.
+一组用于诊断的实用工具。
 
 ### DisposeSafety​
 
-Utilities for disposing stuff.
+用于处理物品的实用工具。
 
 ### DisposeSafety.ScopedFinalizer​
 
-managing finalizing stuff 的工具类
+用于管理最终处理事务的实用工具类。
 
 ### EnumExtensions​
 
@@ -47,79 +47,79 @@ managing finalizing stuff 的工具类
 
 ### FilesystemUtil​
 
-辅助 函数 for filesystem operations.
+用于文件系统操作的辅助函数。
 
 ### Hash​
 
-工具 函数 for hashing.
+用于哈希的实用函数。
 
 ### HitchDetector​
 
-工具 类 to detect hitches.
+用于检测卡顿的实用工具类。
 
 ### ItemUtil​
 
-Utilities related to Items.
+与物品相关的实用工具。
 
 ### MapUtil​
 
-工具 辅助 类 for game maps and coordinate translations that don't require state. The conversion 方法 were found in 89 54 24 10 56 41 55 41 56 48 81 EC, which itself was found by looking for uses of AddonText 1631.
+用于游戏地图和不需要状态的坐标转换的实用辅助类。转换方法在 89 54 24 10 56 41 55 41 56 48 81 EC 中找到，该方法本身是通过查找 AddonText 1631 的使用情况发现的。
 
 ### ObjectKindExtensions​
 
-the Dalamud.Game.ClientState.对象.枚举.ObjectKind 枚举 的扩展方法
+Dalamud.Game.ClientState.Objects.Enums.ObjectKind 枚举的扩展方法。
 
 ### ScopedSyncRoot​
 
-Scope for 插件 list locks.
+插件列表锁的作用域。
 
 ### SeStringExtensions​
 
-SeStrings 的扩展方法
+SeStrings 的扩展方法。
 
 ### StringExtensions​
 
-strings 的扩展方法
+字符串的扩展方法。
 
 ### TaskExtensions​
 
-扩展 方法 to make working with 系统.Threading.Tasks.Task easier.
+使使用 System.Threading.Tasks.Task 更加方便的扩展方法。
 
 ### TexFileExtensions​
 
-扩展 to Lumina.数据.Files.TexFile.
+对 Lumina.Data.Files.TexFile 的扩展。
 
 ### ThreadSafety​
 
-Helpers for working with thread safety.
+用于处理线程安全的助手。
 
 ### Utf8StringExtensions​
 
-A set of helpful utilities for working with FFXIVClientStructs.FFXIV.Client.系统.String.Utf8Strings from ClientStructs.
+一组用于处理来自 ClientStructs 的 FFXIVClientStructs.FFXIV.Client.System.String.Utf8Strings 的有用工具。
 
 ### Util​
 
-类 providing various 辅助 方法 for use in Dalamud and 插件.
+提供在 Dalamud 和插件中使用的各种辅助方法的类。
 
 ### WeakConcurrentCollection&lt;T&gt;​
 
-An implementation of a weak concurrent set based on a 系统.Runtime.CompilerServices.ConditionalWeakTable2`.
+基于 System.Runtime.CompilerServices.ConditionalWeakTable2` 的弱并发集合的实现。
 
 ## 结构体
 
 ### RentedSeStringBuilder​
 
-提供 a temporarily rented Lumina.Text.SeStringBuilder from a shared pool
+从共享池中提供临时租用的 Lumina.Text.SeStringBuilder。
 
 ## 接口
 
 ### DisposeSafety.IDisposeCallback​
 
-接口 that marks a disposable that it can call back on dispose.
+标记可释放的接口，可以在释放时回调。
 
 ## 枚举
 
 ### ItemKind​
 
-Kinds of items that can be fetched from this payload.
+可以从此有效载荷中获取的项目类型。
 

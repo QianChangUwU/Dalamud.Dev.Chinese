@@ -11,59 +11,59 @@ sidebar_label: "Dalamud.Game.Config"
 
 ### ConfigChangeEvent​
 
-表示 a change in the 配置
+表示配置中的变化。
 
 ### ConfigChangeEvent&lt;T&gt;​
 
-表示 a generic change in the 配置
+表示配置中的通用变化。
 
 ### ConfigOptionNotFoundException​
 
-An exception thrown when a matching 配置 选项 is not present in the 配置 section.
+当配置部分中不存在匹配的配置选项时抛出的异常。
 
 ### FloatConfigProperties​
 
-表示 a floating point 配置 property
+表示浮点配置属性。
 
 ### GameConfigOptionAttribute​
 
-An 特性，用于 defining GameConfig 选项.
+用于定义GameConfig选项的属性。
 
 ### GameConfigSection​
 
-表示 a section of the game 配置 and contains 辅助 函数 for accessing and setting values
+表示游戏配置的一个部分，并包含用于访问和设置值的辅助函数。
 
 ### IncorrectConfigTypeException​
 
-An exception thrown when attempting to assign a value to a 配置 选项 with the wrong 类型.
+当尝试将值分配给类型错误的配置选项时抛出的异常。
 
 ### StringConfigProperties​
 
-表示 a string 配置 property
+表示一个字符串配置属性。
 
 ### UIntConfigProperties​
 
-表示 a uint 配置 property
+表示一个无符号整数配置属性。
 
 ## 枚举
 
 ### ConfigType​
 
-类型 of 选项 used by the game 配置.
+游戏配置使用的选项类型。
 
 ### PadButtonValue​
 
-Valid values for PadButton 选项 under Dalamud.Game.配置.SystemConfigOption.
+在 Dalamud.Game.Config.SystemConfigOption 下 PadButton 选项的有效值。
 
 ### SystemConfigOption​
 
-配置 选项 in the 系统 section.
+系统部分的配置选项。
 
 ### UiConfigOption​
 
-配置 选项 in the UiConfig section.
+UiConfig 部分的配置选项。
 
 ### UiControlOption​
 
-配置 选项 in the UiControl section.
+UiControl 部分的配置选项。
 

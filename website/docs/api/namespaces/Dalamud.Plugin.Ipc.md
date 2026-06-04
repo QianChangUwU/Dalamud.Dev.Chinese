@@ -11,103 +11,103 @@ sidebar_label: "Dalamud.Plugin.Ipc"
 
 ### AdapterMethodMissingException​
 
-Exception thrown if the 方法 requested in a Dalamud.插件.Ipc.IIdDataShareAdapter or a Dalamud.插件.Ipc.INameDataShareAdapter does not exist.
+如果在Dalamud.Plugin.Ipc.IIdDataShareAdapter或Dalamud.Plugin.Ipc.INameDataShareAdapter中请求的方法不存在，则抛出异常。
 
 ### AdapterTypeMismatchException​
 
-Exception thrown if the 方法 requested in a Dalamud.插件.Ipc.IIdDataShareAdapter or a Dalamud.插件.Ipc.INameDataShareAdapter can not 处理 a specified argument 类型.
+如果在Dalamud.Plugin.Ipc.IIdDataShareAdapter或Dalamud.Plugin.Ipc.INameDataShareAdapter中请求的方法无法处理指定的参数类型，则抛出异常。
 
 ### IpcContext​
 
-The context associated for an IPC call. Reads from ThreadLocal.
+与IPC调用相关的上下文。从ThreadLocal读取。
 
 ## 接口
 
 ### ICallGateProvider​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, T4, T5, T6, T7, T8, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, T4, T5, T6, T7, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, T4, T5, T6, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, T4, T5, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, T4, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, T3, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, T2, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;T1, TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateProvider&lt;TRet&gt;​
 
-The backing 接口 for the 提供者 ("server") half of an IPC channel. This 接口 is used to expose 方法 to other 插件 via RPC, as well as to allow other 插件 to subscribe to 通知 from this 插件.
+IPC通道的提供者（“服务器”）部分的支持接口。此接口用于通过RPC向其他插件公开方法，并允许其他插件订阅来自此插件的通知。
 
 ### ICallGateSubscriber​
 
-An 接口 for all IPC subscribers.
+所有IPC订阅者的接口。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, T4, T5, T6, T7, T8, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, T4, T5, T6, T7, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, T4, T5, T6, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, T4, T5, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, T4, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, T3, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, T2, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;T1, TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### ICallGateSubscriber&lt;TRet&gt;​
 
-此类辅助 inter-插件 communication
+此类促进插件之间的通信。
 
 ### IIdDataShareAdapter​
 
-An 接口 to provide live IPC adapters that can invoke 方法 directly using custom IDs without the runtime overhead of IPC queries.
+提供实时IPC适配器的接口，可以直接使用自定义ID调用方法，而无需IPC查询的运行时开销。
 
 ### INameDataShareAdapter​
 
-An 接口 to provide live IPC adapters that can invoke 方法 directly using names without the runtime overhead of IPC queries.
+提供实时IPC适配器的接口，可以直接使用名称调用方法，而无需IPC查询的运行时开销。
 

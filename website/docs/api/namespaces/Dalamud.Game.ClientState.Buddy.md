@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Buddy"
 
 ### IBuddyMember​
 
-表示 represents a buddy such as the chocobo companion summoned pets squadron groups and trust parties 的接口
+表示伙伴的接口，例如陆行鸟伙伴、召唤的宠物、编队组和信任小队。
 
