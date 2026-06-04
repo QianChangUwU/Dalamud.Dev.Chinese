@@ -1,0 +1,8 @@
+{
+  "label": "命名空间",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "所有 Dalamud API 命名空间的中文概述。"
+  }
+}
