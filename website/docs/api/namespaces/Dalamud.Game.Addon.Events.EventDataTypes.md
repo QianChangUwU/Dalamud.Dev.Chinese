@@ -11,9 +11,9 @@ sidebar_label: "Dalamud.Game.Addon.Events.EventDataTypes"
 
 ### AddonEventData​
 
-表示处理本机事件时相关数据的对象。
+表示在处理本机事件时相关数据的对象。
 
 ### AddonMouseEventData​
 
-表示处理本机事件时相关数据的对象。
+表示在处理本机事件时相关数据的对象。
 

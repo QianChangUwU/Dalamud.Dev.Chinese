@@ -19,27 +19,27 @@ sidebar_label: "Dalamud.Interface.Utility.Raii"
 
 ### ImRaii.DisabledDisposable​
 
-禁用状态的包装器。
+围绕禁用状态的包装器。
 
 ### ImRaii.EnabledDisposable​
 
-重新启用状态的包装器。
+一个用于重新启用状态的包装器。
 
 ### ImRaii.FontDisposable​
 
-推送字体的包装器。
+一个用于推送字体的包装器。
 
 ### ImRaii.IdDisposable​
 
-ID 推送的包装器。
+一个用于推送ID的包装器。
 
 ### ImRaii.IndentDisposable​
 
-缩进的包装器。
+一个用于缩进的包装器。
 
 ### ImRaii.ItemWidthDisposable​
 
-推送项目宽度的包装器。
+一个用于推送项目宽度的包装器。
 
 ### ImRaii.PlotColorDisposable​
 
@@ -47,111 +47,111 @@ ID 推送的包装器。
 
 ### ImRaii.PlotStyleDisposable​
 
-样式推送的包装器。
+一个用于推送样式的包装器。
 
 ### ImRaii.StyleDisposable​
 
-样式推送的包装器。
+一个用于推送样式的包装器。
 
 ### ImRaii.TextWrapDisposable​
 
-推送文本换行位置的包装器。
+一个用于推送文本换行位置的包装器。
 
 ## 结构体
 
 ### ImRaii.ChildDisposable​
 
-ImGui 子窗口的包装器。
+一个用于ImGui子窗口的包装器。
 
 ### ImRaii.ChildFrameDisposable​
 
-ImGui 子框架的包装器。
+一个用于ImGui子框架的包装器。
 
 ### ImRaii.ColumnsDisposable​
 
-创建表格前样式列分隔的包装器。
+一个用于创建表格前样式列分隔的包装器。
 
 ### ImRaii.ComboDisposable​
 
-创建表格前样式列分隔的包装器。
+一个用于创建表格前样式列分隔的包装器。
 
 ### ImRaii.DragDropSourceDisposable​
 
-ImGui 拖放源的包装器。
+一个用于ImGui拖放源的包装器。
 
 ### ImRaii.DragDropTargetDisposable​
 
-ImGui 拖放目标的包装器。
+一个用于ImGui拖放目标的包装器。
 
 ### ImRaii.GroupDisposable​
 
-ImGui 组的包装器。
+一个用于ImGui组的包装器。
 
 ### ImRaii.HeaderDisposable​
 
-同时推送 ID 的 ImGui 折叠标题的包装器。
+一个用于ImGui折叠标题的包装器，同时推送一个ID。
 
 ### ImRaii.ListBoxDisposable​
 
-ImGui 列表框的包装器。
+一个用于ImGui列表框的包装器。
 
 ### ImRaii.MainMenuBarDisposable​
 
-ImGui 主菜单栏的包装器。
+一个用于ImGui主菜单栏的包装器。
 
 ### ImRaii.MenuBarDisposable​
 
-ImGui 菜单栏的包装器。
+一个用于ImGui菜单栏的包装器。
 
 ### ImRaii.MenuDisposable​
 
-ImGui 菜单的包装器。
+一个用于ImGui菜单的包装器。
 
 ### ImRaii.PlotAlignedDisposable​
 
-ImPlots 对齐图的包装器。
+一个用于ImPlots对齐图的包装器。
 
 ### ImRaii.PlotDisposable​
 
-ImPlots 图的包装器。
+一个用于ImPlots图的包装器。
 
 ### ImRaii.PlotDragDropSourceDisposable​
 
-ImPlots 拖放源的包装器。
+一个用于ImPlots拖放源的包装器。
 
 ### ImRaii.PlotDragDropTargetDisposable​
 
-ImPlots 拖放目标的包装器。
+一个用于ImPlots拖放目标的包装器。
 
 ### ImRaii.PlotLegendDisposable​
 
-ImPlots 图例的包装器。
+一个用于ImPlots图例的包装器。
 
 ### ImRaii.PlotSubDisposable​
 
-ImPlots 图子项的包装器。
+一个用于ImPlots子图的包装器。
 
 ### ImRaii.PopupDisposable​
 
-ImGui 弹出窗口的封装。
+一个用于ImGui弹出窗口的包装器。
 
 ### ImRaii.TabBarDisposable​
 
-ImGui 标签栏的封装。
+一个用于ImGui标签栏的包装器。
 
 ### ImRaii.TabItemDisposable​
 
-ImGui 标签项的封装。
+一个用于ImGui标签项的包装器。
 
 ### ImRaii.TableDisposable​
 
-ImGui 表格的封装。
+一个用于ImGui表格的包装器。
 
 ### ImRaii.TooltipDisposable​
 
-ImGui 工具提示的封装。
+一个用于ImGui工具提示的包装器。
 
 ### ImRaii.TreeNodeDisposable​
 
-ImGui 树节点的封装。
+一个用于ImGui树节点的包装器。
 

@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.Text"
 
 ### SeIconCharExtensions​
 
-Dalamud.Game.Text.SeIconChar 的扩展方法。
+Dalamud.Game.Text.SeIconChar 的扩展方法
 
 ### XivChatEntry​
 
@@ -23,11 +23,11 @@ Dalamud.Game.Text.SeIconChar 的扩展方法。
 
 ### XivChatTypeExtensions​
 
-Dalamud.Game.Text.XivChatType 类型的扩展方法。
+针对 Dalamud.Game.Text.XivChatType 类型的扩展方法。
 
 ### XivChatTypeInfoAttribute​
 
-存储与聊天类型相关的信息。
+与聊天类型相关的信息存储。
 
 ## 枚举
 

@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Utility.Signatures"
 
 ### SignatureAttribute​
 
-使用 SignatureHelper 的主要方式。将此属性应用于任何应该使用签名的字段/属性。有关更多信息，请参见字段文档。
+使用SignatureHelper的主要方式。将此属性应用于任何应该使用签名的字段/属性。有关更多信息，请参见字段文档。
 
 ### SignatureException​
 
@@ -29,5 +29,5 @@ sidebar_label: "Dalamud.Utility.Signatures"
 
 ### SignatureUseFlags​
 
-用于签名属性的标志。这告诉 SignatureHelper 如何使用签名的结果。
+为签名属性使用标志。这告诉SignatureHelper如何使用签名的结果。
 

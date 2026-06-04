@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.Addon.Events"
 
 ### AddonEventHandle​
 
-表示 Addon 事件句柄的类。
+表示 addon 事件句柄的类。
 
 ### AddonEventTypeConversions​
 
@@ -27,7 +27,7 @@ sidebar_label: "Dalamud.Game.Addon.Events"
 
 ### AddonCursorType​
 
-CursorType 的重新实现。
+Reimplementation of CursorType.
 
 ### AddonEventType​
 

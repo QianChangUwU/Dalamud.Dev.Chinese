@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Interface"
 
 ### ColorHelpers​
 
-包含各种颜色操作方法的类。
+包含各种操作颜色的方法的类。
 
 ### FontAwesomeCategoriesAttribute​
 
@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Interface"
 
 ### FontAwesomeExtensions​
 
-用于 Dalamud.Interface.FontAwesomeIcon 的扩展方法。
+Dalamud.接口.FontAwesomeIcon 的扩展方法
 
 ### FontAwesomeHelpers​
 

@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.Inventory.Records"
 
 ### MateriaEntry​
 
-一个记录，用于保存有关特定 Materia 的简单信息。
+用于保存有关特定 materia 的简单信息的记录。
 

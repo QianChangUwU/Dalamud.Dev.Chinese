@@ -15,7 +15,7 @@ sidebar_label: "Dalamud.Interface.ImGuiFileDialog"
 
 ### FileDialogManager​
 
-Dalamud.Interface.ImGuiFileDialog.FileDialog 类的管理器。
+用于管理 Dalamud.Interface.ImGuiFileDialog.FileDialog 类的管理器。
 
 ## 枚举
 
@@ -25,5 +25,5 @@ Dalamud.Interface.ImGuiFileDialog.FileDialog 类的管理器。
 
 ### ImGuiFileDialogFlags​
 
-Dalamud.Interface.ImGuiFileDialog.FileDialog 类的设置标志。
+用于 Dalamud.Interface.ImGuiFileDialog.FileDialog 类的设置标志。
 

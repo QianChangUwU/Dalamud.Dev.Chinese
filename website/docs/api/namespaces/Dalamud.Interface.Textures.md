@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Interface.Textures"
 
 ### DalamudTextureWrapExtensions​
 
-用于 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的扩展方法。
+Dalamud.接口.Textures.TextureWraps.IDalamudTextureWrap 的扩展方法
 
 ### ForwardingSharedImmediateTexture​
 
-包装一个 dalamud 纹理，允许与某些服务的互操作性。仅在需要提供作为 ISharedImmediateTexture 创建或租用的纹理时使用。
+包装一个 dalamud 纹理，允许与某些服务的互操作性。仅在需要提供已创建或租用的 ISharedImmediateTexture 纹理时使用此项。
 
 ## 结构体
 
@@ -39,9 +39,9 @@ sidebar_label: "Dalamud.Interface.Textures"
 
 ### IBitmapCodecInfo​
 
-表示一个可用的位图编解码器。
+表示可用的位图编解码器。
 
 ### ISharedImmediateTexture​
 
-一个具有 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 背后实例的纹理，该实例在多个请求者之间共享。
+一个具有 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的后备实例的纹理，该实例在多个请求者之间共享。
 

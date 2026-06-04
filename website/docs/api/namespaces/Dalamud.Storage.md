@@ -15,5 +15,5 @@ sidebar_label: "Dalamud.Storage"
 
 ### ReliableFileStoragePluginScoped​
 
-插件范围的VFS包装器。
+插件范围的 VFS 包装器。
 

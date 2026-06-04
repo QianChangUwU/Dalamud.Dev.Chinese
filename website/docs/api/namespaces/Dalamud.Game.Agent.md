@@ -15,7 +15,7 @@ sidebar_label: "Dalamud.Game.Agent"
 
 ### AgentLifecycleEventListener​
 
-这个类是用于跟踪和调用监听器委托的助手。
+此类是跟踪和调用监听器委托的助手。
 
 ## 枚举
 

@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.Text.Evaluator"
 
 ### SeStringParameter​
 
-一个本地参数的包装器，可以持有数字或字符串。
+一个本地参数的包装器，可以包含数字或字符串。
 

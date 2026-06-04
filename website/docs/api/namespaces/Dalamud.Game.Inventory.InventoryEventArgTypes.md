@@ -15,11 +15,11 @@ sidebar_label: "Dalamud.Game.Inventory.InventoryEventArgTypes"
 
 ### InventoryEventArgs​
 
-表示库存更改事件的抽象基类。
+表示背包更改事件的抽象基类。
 
 ### InventoryItemAddedArgs​
 
-表示与物品被添加到库存相关的数据。
+表示与物品被添加到背包相关的数据。
 
 ### InventoryItemChangedArgs​
 
@@ -31,11 +31,11 @@ sidebar_label: "Dalamud.Game.Inventory.InventoryEventArgTypes"
 
 ### InventoryItemMovedArgs​
 
-表示与物品从一个库存移动并添加到另一个库存相关的数据。
+表示与物品从一个背包移动并添加到另一个背包相关的数据。
 
 ### InventoryItemRemovedArgs​
 
-表示与物品从库存中移除相关的数据。
+表示与物品从背包中移除相关的数据。
 
 ### InventoryItemSplitArgs​
 

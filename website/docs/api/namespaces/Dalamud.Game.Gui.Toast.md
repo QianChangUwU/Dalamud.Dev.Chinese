@@ -11,23 +11,23 @@ sidebar_label: "Dalamud.Game.Gui.Toast"
 
 ### QuestToastOptions​
 
-此类表示可以与 Dalamud.Game.Gui.Toast.ToastGui 类一起使用的选项，用于任务提示变体。
+此类表示可与 Dalamud.Game.Gui.Toast.ToastGui 类一起使用的选项，用于任务提示变体。
 
 ### ToastOptions​
 
-此类表示可以与 Dalamud.Game.Gui.Toast.ToastGui 类一起使用的选项。
+此类表示可与 Dalamud.Game.Gui.Toast.ToastGui 类一起使用的选项。
 
 ## 枚举
 
 ### QuestToastPosition​
 
-本地任务提示窗口的对齐方式。
+原生任务提示窗口的对齐方式。
 
 ### ToastPosition​
 
-本地提示窗口的位置。
+原生提示窗口的位置。
 
 ### ToastSpeed​
 
-本地提示窗口持续存在的速度。
+原生提示窗口持续的速度。
 

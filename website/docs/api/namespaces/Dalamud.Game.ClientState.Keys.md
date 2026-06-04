@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.ClientState.Keys"
 
 ### VirtualKeyExtensions​
 
-针对Dalamud.Game.ClientState.Keys.VirtualKey的扩展方法。
+Dalamud.Game.ClientState.Keys.VirtualKey 的扩展方法
 
 ## 枚举
 

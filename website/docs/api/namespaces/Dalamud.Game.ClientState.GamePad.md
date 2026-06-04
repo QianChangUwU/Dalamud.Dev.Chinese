@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.GamePad"
 
 ### GamepadButtons​
 
-游戏使用的Button ushort的位掩码。
+游戏使用的 Button ushort 的位掩码。
 

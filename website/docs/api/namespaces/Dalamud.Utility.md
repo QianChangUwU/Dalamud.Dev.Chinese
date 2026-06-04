@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Utility"
 
 ### ActionKindExtensions​
 
-Dalamud.Game.ActionKind 枚举的扩展方法。
+用于 Dalamud.Game.ActionKind 枚举的扩展方法。
 
 ### AsyncUtils​
 
@@ -19,7 +19,7 @@ Dalamud.Game.ActionKind 枚举的扩展方法。
 
 ### ClientLanguageExtensions​
 
-Dalamud.Game.ClientLanguage 类的扩展方法。
+用于 Dalamud.Game.ClientLanguage 类的扩展方法。
 
 ### CStringExtensions​
 
@@ -67,7 +67,7 @@ Dalamud.Game.ClientLanguage 类的扩展方法。
 
 ### ObjectKindExtensions​
 
-Dalamud.Game.ClientState.Objects.Enums.ObjectKind 枚举的扩展方法。
+用于 Dalamud.Game.ClientState.Objects.Enums.ObjectKind 枚举的扩展方法。
 
 ### ScopedSyncRoot​
 
@@ -75,23 +75,23 @@ Dalamud.Game.ClientState.Objects.Enums.ObjectKind 枚举的扩展方法。
 
 ### SeStringExtensions​
 
-SeStrings 的扩展方法。
+SeStrings 的扩展方法
 
 ### StringExtensions​
 
-字符串的扩展方法。
+用于字符串的扩展方法。
 
 ### TaskExtensions​
 
-使使用 System.Threading.Tasks.Task 更加方便的扩展方法。
+用于简化与 System.Threading.Tasks.Task 一起工作的扩展方法。
 
 ### TexFileExtensions​
 
-对 Lumina.Data.Files.TexFile 的扩展。
+扩展 to Lumina.数据.Files.TexFile.
 
 ### ThreadSafety​
 
-用于处理线程安全的助手。
+用于处理线程安全的辅助工具。
 
 ### Utf8StringExtensions​
 
@@ -99,23 +99,23 @@ SeStrings 的扩展方法。
 
 ### Util​
 
-提供在 Dalamud 和插件中使用的各种辅助方法的类。
+提供在Dalamud和插件中使用的各种辅助方法的类。
 
 ### WeakConcurrentCollection&lt;T&gt;​
 
-基于 System.Runtime.CompilerServices.ConditionalWeakTable2` 的弱并发集合的实现。
+基于System.Runtime.CompilerServices.ConditionalWeakTable2`的弱并发集合的实现。
 
 ## 结构体
 
 ### RentedSeStringBuilder​
 
-从共享池中提供临时租用的 Lumina.Text.SeStringBuilder。
+从共享池中提供临时租用的Lumina.Text.SeStringBuilder。
 
 ## 接口
 
 ### DisposeSafety.IDisposeCallback​
 
-标记可释放的接口，可以在释放时回调。
+标记可释放对象的接口，允许在释放时进行回调。
 
 ## 枚举
 

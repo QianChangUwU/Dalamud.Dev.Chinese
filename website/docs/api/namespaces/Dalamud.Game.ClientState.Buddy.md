@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Buddy"
 
 ### IBuddyMember​
 
-表示伙伴的接口，例如陆行鸟伙伴、召唤的宠物、编队组和信任小队。
+表示一个伙伴的接口，例如陆行鸟伙伴、召唤宠物、部队小组和亲信战友。
 

@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Game.Gui"
 
 ### HoveredAction​
 
-此类表示当前光标悬停的热键栏动作。
+此类表示当前光标悬停的热键动作。
 
 ## 枚举
 

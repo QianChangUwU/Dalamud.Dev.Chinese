@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Interface.Textures.TextureWraps"
 
 ### ForwardingTextureWrap​
 
-用于实现 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的基类，该类转发到另一个。
+用于实现 Dalamud.Interface.Textures.TextureWraps.IDalamudTextureWrap 的基类，转发到另一个。
 
 ## 接口
 

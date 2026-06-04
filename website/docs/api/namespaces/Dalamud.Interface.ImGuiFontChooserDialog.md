@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.ImGuiFontChooserDialog"
 
 ### SingleFontChooserDialog​
 
-选择字体及其大小的对话框。
+用于选择字体及其大小的对话框。
 

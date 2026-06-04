@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Customize"
 
 ### ICustomizeData​
 
-这个集合表示一个 Dalamud.Game.ClientState.Objects.Types.ICharacter 拥有的自定义数据。
+此集合表示一个 Dalamud.Game.ClientState.Objects.Types.ICharacter 拥有的自定义数据。
 

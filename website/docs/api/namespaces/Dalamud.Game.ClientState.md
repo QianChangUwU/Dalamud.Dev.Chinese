@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.ClientState"
 
 ### ZoneInitEventArgs​
 
-提供游戏应该初始化区域时的事件数据。
+提供游戏应初始化区域时的事件数据。
 
 ## 结构体
 

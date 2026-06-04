@@ -11,37 +11,37 @@ sidebar_label: "Dalamud.Game.Addon.Lifecycle.AddonArgTypes"
 
 ### AddonArgs​
 
-AddonLifecycle AddonArgTypes 的基类。
+AddonLifecycle AddonArgTypes 的基类
 
 ### AddonCloseArgs​
 
-用于 Close 事件的 Addon 参数数据。
+用于 Close 事件的 addon 参数数据。
 
 ### AddonFocusChangedArgs​
 
-用于 OnFocusChanged 事件的 Addon 参数数据。
+用于 OnFocusChanged 事件的 addon 参数数据。
 
 ### AddonHideArgs​
 
-用于 Hide 事件的 Addon 参数数据。
+用于 Hide 事件的 addon 参数数据。
 
 ### AddonReceiveEventArgs​
 
-用于 ReceiveEvent 事件的 Addon 参数数据。
+用于 ReceiveEvent 事件的 addon 参数数据。
 
 ### AddonRefreshArgs​
 
-用于 Refresh 事件的 Addon 参数数据。
+用于 Refresh 事件的 addon 参数数据。
 
 ### AddonRequestedUpdateArgs​
 
-用于 OnRequestedUpdate 事件的 Addon 参数数据。
+用于 OnRequestedUpdate 事件的 addon 参数数据。
 
 ### AddonSetupArgs​
 
-用于 Setup 事件的 Addon 参数数据。
+用于 Setup 事件的 addon 参数数据。
 
 ### AddonShowArgs​
 
-用于 Show 事件的 Addon 参数数据。
+用于 Show 事件的 addon 参数数据。
 

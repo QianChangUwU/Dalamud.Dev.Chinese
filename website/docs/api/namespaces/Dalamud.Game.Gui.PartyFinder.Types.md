@@ -23,7 +23,7 @@ sidebar_label: "Dalamud.Game.Gui.PartyFinder.Types"
 
 ### JobFlagsExtensions​
 
-对于 Dalamud.Game.Gui.PartyFinder.Types.JobFlags 枚举的扩展。
+用于 Dalamud.Game.Gui.PartyFinder.Types.JobFlags 枚举的扩展。
 
 ### LootRuleFlagsConversions​
 
@@ -35,7 +35,7 @@ sidebar_label: "Dalamud.Game.Gui.PartyFinder.Types"
 
 ### PartyFinderSlot​
 
-Party Finder 列表中的玩家插槽。
+在小队寻找列表中的玩家槽位。
 
 ### SearchAreaFlagsConversions​
 
@@ -45,11 +45,11 @@ Party Finder 列表中的玩家插槽。
 
 ### IPartyFinderListing​
 
-一个表示派对寻找器中单个列表的接口。
+表示小队寻找中单个列表项的接口。
 
 ### IPartyFinderListingEventArgs​
 
-一个表示游戏传递的附加参数的接口。
+表示游戏传递的附加参数的接口。
 
 ## 枚举
 
@@ -67,7 +67,7 @@ Party Finder 列表中的玩家插槽。
 
 ### DutyType​
 
-用于 Dalamud.Game.Gui.PartyFinder.PartyFinderGui 类的任务类型标志。
+用于 Dalamud.Game.Gui.PartyFinder.PartyFinderGui 类的副本类型标志。
 
 ### JobFlags​
 

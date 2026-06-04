@@ -15,7 +15,7 @@ sidebar_label: "Dalamud.Game.ClientState.Objects.Types"
 
 ### IBattleNpc​
 
-表示战斗NPC的接口。
+表示战斗 NPC 的接口。
 
 ### ICharacter​
 

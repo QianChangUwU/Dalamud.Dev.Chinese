@@ -25,37 +25,37 @@ sidebar_label: "Dalamud.Plugin"
 
 ### IAsyncDalamudPlugin​
 
-此接口表示一个基本的 Dalamud 插件，异步加载和卸载。所有插件必须实现 Dalamud.Plugin.IDalamudPlugin 或 Dalamud.Plugin.IAsyncDalamudPlugin。
+此接口表示一个基本的 Dalamud 插件，异步加载和卸载。所有插件必须实现 Dalamud.Plugin.IDalamudPlugin 或 Dalamud.Plugin.IAsyncDalamudPlugin 之一。
 
 ### IDalamudPlugin​
 
-此接口表示一个基本的Dalamud插件。所有插件必须实现Dalamud.Plugin.IDalamudPlugin或Dalamud.Plugin.IAsyncDalamudPlugin。
+此接口表示一个基本的 Dalamud 插件。所有插件必须实现 Dalamud.Plugin.IDalamudPlugin 或 Dalamud.Plugin.IAsyncDalamudPlugin 之一。
 
 ### IDalamudPluginInterface​
 
-此接口充当与Dalamud和游戏交互所需的各种对象的接口。
+此接口充当与 Dalamud 和游戏交互所需的各种对象的接口。
 
 ### IExposedPlugin​
 
-表示已安装插件的接口，以便向其他插件公开。
+表示已安装插件的接口，以便暴露给其他插件。
 
 ## 枚举
 
 ### PluginListInvalidationKind​
 
-插件列表更改的原因。
+导致插件列表更改的原因。
 
 ### PluginLoadReason​
 
-此枚举反映加载插件的原因。
+此枚举反映了加载插件的原因。
 
 ## 委托
 
 ### IDalamudPluginInterface.ActivePluginsChangedDelegate​
 
-用于监听活动插件列表更改的事件的委托。
+用于监听活动插件列表变化的事件委托。
 
 ### IDalamudPluginInterface.LanguageChangedDelegate​
 
-用于本地化更改的委托，带有两位字母的ISO语言代码。
+用于本地化变化的委托，带有两位字母的 ISO 语言代码。
 

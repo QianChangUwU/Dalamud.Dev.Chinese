@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Interface.GameFonts"
 
 ### GameFontLayoutPlan.Builder​
 
-构建一个 GameFontLayoutPlan。
+Build a GameFontLayoutPlan.
 
 ### GameFontLayoutPlan.Element​
 
@@ -37,7 +37,7 @@ sidebar_label: "Dalamud.Interface.GameFonts"
 
 ### FdtReader.FontTableHeader​
 
-字形表的头部。
+字形表的标题。
 
 ### FdtReader.KerningTableEntry​
 
@@ -45,7 +45,7 @@ sidebar_label: "Dalamud.Interface.GameFonts"
 
 ### FdtReader.KerningTableHeader​
 
-字距调整表的头部。
+字距调整表的标题。
 
 ### GameFontStyle​
 

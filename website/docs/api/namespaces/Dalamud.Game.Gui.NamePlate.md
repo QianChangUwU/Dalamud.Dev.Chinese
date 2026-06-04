@@ -29,11 +29,11 @@ sidebar_label: "Dalamud.Game.Gui.NamePlate"
 
 ### INamePlateUpdateContext​
 
-包含与待处理姓名牌数据更新相关的信息。这仅在单个帧内有效，不应跨帧保留。
+包含与待处理姓名牌数据更新相关的信息。此信息仅在单个帧内有效，不应跨帧保留。
 
 ### INamePlateUpdateHandler​
 
-一个表示单个姓名牌的类。提供查找与姓名牌相关的游戏对象的机制，并允许修改数字和字符串数组数据中的各种后备字段，这反过来会影响姓名牌绘制时的外观。此类的实例仅在单个帧内有效，不应跨帧保留。
+表示单个姓名牌的类。提供查找与姓名牌关联的游戏对象的机制，并允许修改数字和字符串数组数据中的各种后备字段，从而影响姓名牌绘制时的外观。此类的实例仅在单个帧内有效，不应跨帧保留。
 
 ## 枚举
 
@@ -43,5 +43,5 @@ sidebar_label: "Dalamud.Game.Gui.NamePlate"
 
 ### NamePlateStringField​
 
-一个描述姓名牌数据中可用字符串字段的枚举。Dalamud.Game.Gui.NamePlate.NamePlateKind 和各种标志决定哪些字段将实际被渲染。
+描述姓名牌数据中可用字符串字段的枚举。Dalamud.Game.Gui.NamePlate.NamePlateKind 和各种标志决定哪些字段将实际被渲染。
 

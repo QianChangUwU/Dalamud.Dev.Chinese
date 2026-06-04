@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Game.Gui.ContextMenu"
 
 ### MenuItem​
 
-可以添加到上下文菜单中的菜单项。
+可以添加到上下文菜单的菜单项。
 
 ### MenuTarget​
 
@@ -23,7 +23,7 @@ Dalamud.Game.Gui.ContextMenu.MenuArgs 上下文的基类。根据 Dalamud.Game.G
 
 ### MenuTargetInventory​
 
-库存上下文菜单上的目标信息。
+背包上下文菜单上的目标信息。
 
 ## 接口
 
@@ -33,7 +33,7 @@ Dalamud.Game.Gui.ContextMenu.MenuArgs 上下文的基类。根据 Dalamud.Game.G
 
 ### IMenuItem​
 
-表示要添加到上下文菜单中的菜单项的接口。
+表示要添加到上下文菜单的菜单项的接口。
 
 ### IMenuItemClickedArgs​
 

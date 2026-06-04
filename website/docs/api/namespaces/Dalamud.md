@@ -31,7 +31,7 @@ Dalamud 系统的主入口点。
 
 ### DalamudAsset​
 
-指定作为 Dalamud 资产发布的资产。任何资产都可以在任何时候停止存在，即使枚举值存在。要么发布自己的资产，要么准备好处理错误。
+指定作为 Dalamud Asset 发送的资产。任何资产都可以在任何时候停止存在，即使枚举值存在。要么发送您自己的资产，要么准备好处理错误。
 
 ## 委托
 
@@ -41,5 +41,5 @@ Dalamud 系统的主入口点。
 
 ### Localization.LocalizationChangedDelegate​
 
-用于 Dalamud.Localization.LocalizationChanged 事件的委托，该事件在语言更改时发生。
+在语言更改时发生的 Dalamud.Localization.LocalizationChanged 事件的委托。
 

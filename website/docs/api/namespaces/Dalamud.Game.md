@@ -21,9 +21,9 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### ActionKind​
 
-描述可能的动作种类的枚举。
+描述可能的动作类型的枚举。
 
 ### ClientLanguage​
 
-描述游戏加载的语言的枚举。
+描述游戏加载语言的枚举。
 

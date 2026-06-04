@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Interface.Textures.Internal"
 
 ### IconNotFoundException​
 
-找不到图标时抛出的异常。
+当找不到图标时抛出的异常。
 

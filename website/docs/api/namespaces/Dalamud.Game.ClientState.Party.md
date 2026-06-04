@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Party"
 
 ### IPartyMember​
 
-表示队伍成员的接口。
+表示小队成员的接口。
 

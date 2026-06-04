@@ -35,9 +35,9 @@ sidebar_label: "Dalamud.Interface.Windowing"
 
 ### IWindow​
 
-表示一个用于内置 Dalamud.Interface.Windowing.WindowSystem 的 ImGui 窗口。
+表示与内置的 Dalamud.Interface.Windowing.WindowSystem 一起使用的 ImGui 窗口。
 
 ### IWindowSystem​
 
-使用 Dalamud.Interface.Windowing.IWindow 实现来简化 ImGui 窗口管理的 WindowSystem 运行类。
+运行 WindowSystem 的类，使用 Dalamud.Interface.Windowing.IWindow 实现来简化 ImGui 窗口管理。
 

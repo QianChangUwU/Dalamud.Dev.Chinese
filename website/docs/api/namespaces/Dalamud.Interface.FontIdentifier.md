@@ -37,7 +37,7 @@ sidebar_label: "Dalamud.Interface.FontIdentifier"
 
 ### IFontFamilyId​
 
-表示字体系列标识符。并不打算供插件实现。
+表示字体家族标识符。并不打算供插件实现。
 
 ### IFontId​
 

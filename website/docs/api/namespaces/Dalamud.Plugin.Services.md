@@ -11,15 +11,15 @@ sidebar_label: "Dalamud.Plugin.Services"
 
 ### IAddonEventManager​
 
-用于插件事件管理的服务提供者。
+服务提供者，用于 Addon 事件管理
 
 ### IAddonLifecycle​
 
-此类提供游戏内插件生命周期的事件。
+此类提供游戏内 Addon 生命周期的事件。
 
 ### IAetheryteList​
 
-此集合表示传送窗口中可用的以太石列表。
+此集合表示传送界面中可用的以太水晶列表。
 
 ### IAgentLifecycle​
 
@@ -27,7 +27,7 @@ sidebar_label: "Dalamud.Plugin.Services"
 
 ### IBuddyList​
 
-此集合表示您在中队或信任队伍中的伙伴。它不包括本地玩家。
+此集合表示您部队或亲信战友中的伙伴。它不包括本地玩家。
 
 ### IChatGui​
 
@@ -39,11 +39,11 @@ sidebar_label: "Dalamud.Plugin.Services"
 
 ### ICommandManager​
 
-此类管理注册的游戏内斜杠命令。
+此类管理已注册的游戏内斜杠命令。
 
 ### ICondition​
 
-提供对条件（通常是玩家状态）的访问。您可以检查玩家是否在战斗中、骑乘等。
+提供对条件（通常是玩家状态）的访问。您可以检查玩家是否在战斗中、是否骑乘等。
 
 ### IConsole​
 
@@ -55,11 +55,11 @@ sidebar_label: "Dalamud.Plugin.Services"
 
 ### IDalamudService​
 
-Dalamud 服务的标记接口。
+Dalamud 服务 的标记接口
 
 ### IDataManager​
 
-此类提供 Dalamud 内部功能的数据，但在需要时也可以被插件使用。
+此类提供 Dalamud 内部功能的数据，但插件在需要时也可以使用。
 
 ### IDtrBar​
 
@@ -67,35 +67,35 @@ Dalamud 服务的标记接口。
 
 ### IDutyState​
 
-此类表示当前占用任务的状态。
+此类表示当前占用副本的状态。
 
 ### IFateTable​
 
-此集合表示当前可用的命运事件。
+此集合表示当前可用的 FATE 事件。
 
 ### IFlyTextGui​
 
-此类促进与创建原生游戏内 "飞行文本" 的交互。
+此类便于与原生游戏中的 "飞字" 进行交互和创建。
 
 ### IFramework​
 
-此类表示原生游戏客户端的框架，并授予对各种子系统的访问权限。
+此类表示原生游戏客户端的框架，并提供对各种子系统的访问。
 
 ### IGameConfig​
 
-此类表示 游戏配置
+此类表示 游戏设定
 
 ### IGameGui​
 
-处理游戏内 UI 许多方面的类。
+处理游戏内用户界面多个方面的类。
 
 ### IGameInteropProvider​
 
-负责创建钩子的服务。
+服务负责创建 Hook
 
 ### IGameInventory​
 
-此类提供游戏内库存的事件。
+此类提供游戏内背包的事件。
 
 ### IGameLifecycle​
 
@@ -107,7 +107,7 @@ Dalamud 服务的标记接口。
 
 ### IJobGauges​
 
-此类将内存中的职业计量数据转换为结构体。
+此类将内存中的职业量谱数据转换为结构体。
 
 ### IKeyState​
 
@@ -115,11 +115,11 @@ Dalamud 服务的标记接口。
 
 ### IMarketBoard​
 
-提供对市场板相关事件的访问，客户端在接收/发送时。
+提供对市场板相关事件的访问，客户端接收/发送时使用。
 
 ### INamePlateGui​
 
-用于修改渲染姓名牌时使用的数据的类。
+用于修改渲染姓名板时使用的数据的类。
 
 ### INotificationManager​
 
@@ -131,11 +131,11 @@ Dalamud 服务的标记接口。
 
 ### IPartyFinderGui​
 
-此类处理与原生 PartyFinder 窗口的交互。
+此类处理与原生小队查找窗口的交互。
 
 ### IPartyList​
 
-此集合表示您队伍或联盟中的演员。
+此集合表示您小队或联盟中的角色。
 
 ### IPlayerState​
 
@@ -147,11 +147,11 @@ Dalamud 服务的标记接口。
 
 ### IReliableFileStorage​
 
-与文件系统交互的服务，作为标准 C# 文件 I/O 的替代。使用此服务的写入和读取在我们能力范围内是原子和可靠的。所有数据立即同步到磁盘并写入数据库，此外还写入磁盘上的文件。这意味着在文件损坏的情况下，数据可能可以从数据库中恢复。然而，这也意味着使用此服务的操作会在磁盘上重复数据，因此我们不建议执行大文件操作。该服务不允许写入大于 Dalamud.Plugin.Services.IReliableFileStorage.MaxFileSizeBytes (64MB) 的文件。使用 Dalamud.Configuration.PluginConfigurations 类保存的配置数据隐式使用此功能。
+与文件系统交互的服务，作为标准 C# 文件 I/O 的替代品。使用此服务的写入和读取在我们能力范围内是原子和可靠的。所有数据立即同步到磁盘并写入数据库，此外还写入磁盘上的文件。这意味着在文件损坏的情况下，数据可能可以从数据库中恢复。然而，这也意味着使用此服务的操作会在磁盘上重复数据，因此我们不建议执行大文件操作。该服务不允许写入大于 Dalamud.Plugin.Services.IReliableFileStorage.MaxFileSizeBytes（64MB）的文件。使用 Dalamud.Configuration.PluginConfigurations 类保存的配置数据隐式使用此功能。
 
 ### ISelfTestRegistry​
 
-用于从插件注册和注销自测步骤的接口。
+用于注册和注销插件自测步骤的接口。
 
 ### ISeStringEvaluator​
 
@@ -167,7 +167,7 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### ITextureProvider​
 
-提供访问您可以通过 ImGui 渲染的纹理的服务。
+提供访问可以通过 ImGui 渲染的纹理的服务。
 
 ### ITextureReadbackProvider​
 
@@ -179,11 +179,11 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### ITitleScreenMenu​
 
-负责管理标题屏幕菜单中元素的类的接口。
+负责管理标题屏幕菜单元素的类的接口。
 
 ### IToastGui​
 
-此类便于与本机通知窗口交互和创建。
+此类便于与本地 Toast 窗口进行交互和创建。
 
 ### IUnlockState​
 
@@ -203,7 +203,7 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### IAddonLifecycle.AddonEventDelegate​
 
-用于接收附加组件生命周期事件消息的委托。
+用于接收 Addon 生命周期事件消息的委托。
 
 ### IAgentLifecycle.AgentEventDelegate​
 
@@ -267,27 +267,27 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### IGameInventory.InventoryChangedDelegate​
 
-在每次更改库存时调用的委托函数。此委托为更改发送单独的事件。
+在每次背包发生变化时调用的委托函数。此委托为每个变化发送单独的事件。
 
 ### IGameInventory.InventoryChangedDelegate&lt;T&gt;​
 
-在每次更改库存时调用的委托函数。此委托为更改发送单独的事件。
+在每次背包发生变化时调用的委托函数。此委托为每个变化发送单独的事件。
 
 ### IGameInventory.InventoryChangelogDelegate​
 
-在库存发生更改时调用的委托函数。此委托发送记录的所有更改。
+在背包发生变化时调用的委托函数。此委托发送记录的所有变化的完整集合。
 
 ### IMarketBoard.HistoryReceivedDelegate​
 
-用于 Dalamud.Plugin.Services.IMarketBoard.HistoryReceived 事件的委托类型。
+与 Dalamud.Plugin.Services.IMarketBoard.HistoryReceived 事件一起使用的委托类型。
 
 ### IMarketBoard.ItemPurchasedDelegate​
 
-用于 Dalamud.Plugin.Services.IMarketBoard.ItemPurchased 事件的委托类型。
+与 Dalamud.Plugin.Services.IMarketBoard.ItemPurchased 事件一起使用的委托类型。
 
 ### IMarketBoard.OfferingsReceivedDelegate​
 
-用于 Dalamud.Plugin.Services.IMarketBoard.OfferingsReceived 事件的委托类型。
+与 Dalamud.Plugin.Services.IMarketBoard.OfferingsReceived 事件一起使用的委托类型。
 
 ### IMarketBoard.PurchaseRequestedDelegate​
 
@@ -303,11 +303,11 @@ SigScanner 便于在给定的 ProcessModule 中搜索内存签名。
 
 ### IPartyFinderGui.PartyFinderListingEventDelegate​
 
-每当游戏接收到单个派对寻找器列表时触发的事件类型。无法修改列表，但可以隐藏它们。
+每当游戏接收到单个小队寻找器列表时触发的事件类型。无法修改列表，但可以隐藏它们。
 
 ### ITextureSubstitutionProvider.TextureDataInterceptorDelegate​
 
-描述一个可以用来拦截和替换纹理数据的函数的委托。分配的路径可以指向游戏数据中的另一个纹理，或磁盘上的 .tex 文件或图像。
+描述一个可以用于拦截和替换纹理数据的函数的委托。分配的路径可以指向游戏数据中的另一个纹理，或磁盘上的 .tex 文件或图像。
 
 ### IToastGui.OnErrorToastDelegate​
 

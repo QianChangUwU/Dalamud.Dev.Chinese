@@ -162,6 +162,26 @@ async function batchAiTranslate() {
 Rules:
 - Keep ALL C# type names, method names, property names, code snippets in original English (e.g. IAddonEventManager, Dalamud, EntryPoint, etc.)
 - Only translate descriptive text
+- USE FINAL FANTASY XIV OFFICIAL SIMPLIFIED CHINESE TERMINOLOGY:
+  - Aetheryte → 以太水晶 (not 水晶 or 以太石)
+  - Teleport → 传送
+  - Teleport window → 传送界面
+  - Squadron → 部队
+  - Trust → 亲信战友
+  - Party → 小队
+  - Duty → 副本
+  - Mount → 坐骑
+  - Fate → FATE
+  - Status effect → 状态效果
+  - Buff → 增益, Debuff → 减益
+  - Job gauge → 职业量谱
+  - Configuration → 设定 (not 配置)
+  - Inventory → 背包
+  - Character → 角色
+  - Localization → 本地化
+  - Attribute → 特性
+  - Addon → Addon (keep English)
+  - Plugin → 插件
 - Output a valid JSON object where keys are the original strings and values are Chinese translations
 - No markdown, no extra text, just JSON
 

@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Conditions"
 
 ### ConditionFlag​
 
-可以在本地客户端上设置的可能状态标志（或称为内部条件）。这些来自 LogMessage（某处），并直接映射到客户端管理的每个状态字段。从 5.25 开始，它映射到 LogMessage 行 7700 及之后的行，可以通过查看 Condition 表并查看第 2 列映射到的内容来检查。前 24 个条件是本地玩家的 CharacterModes。
+可以在本地客户端设置的可能状态标志（或称为内部条件）。这些来自 LogMessage（某处），并直接映射到客户端管理的每个状态字段。从 5.25 开始，它映射到 LogMessage 第 7700 行及之后的内容，可以通过查看条件表和查看第 2 列映射到的内容来检查。前 24 个条件是本地玩家的 CharacterModes。
 

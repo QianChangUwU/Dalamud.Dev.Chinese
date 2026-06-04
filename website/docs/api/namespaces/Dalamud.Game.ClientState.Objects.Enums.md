@@ -25,7 +25,7 @@ sidebar_label: "Dalamud.Game.ClientState.Objects.Enums"
 
 ### CustomizeIndex​
 
-此枚举描述Customize数组的索引。
+此枚举描述 Customize 数组的索引。
 
 ### ObjectKind​
 

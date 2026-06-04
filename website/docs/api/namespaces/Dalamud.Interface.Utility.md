@@ -19,7 +19,7 @@ sidebar_label: "Dalamud.Interface.Utility"
 
 ### ImGuiHelpers​
 
-包含在 Dalamud 内部与 ImGui 一起使用的各种辅助方法的类。
+包含在 Dalamud 中与 ImGui 一起使用的各种辅助方法的类。
 
 ### ImGuiHelpers.HorizontalButtonGroup​
 
@@ -27,7 +27,7 @@ sidebar_label: "Dalamud.Interface.Utility"
 
 ### ImGuiTable​
 
-用于绘制表格的助手。
+绘制表格的助手。
 
 ### ImVectorWrapper​
 
@@ -37,7 +37,7 @@ sidebar_label: "Dalamud.Interface.Utility"
 
 ### BufferBackedImDrawData​
 
-围绕 Dalamud.Bindings.ImGui.ImDrawData 的包装器，包含一个 Dalamud.Bindings.ImGui.ImDrawList。
+围绕包含一个 Dalamud.Bindings.ImGui.ImDrawList 的 Dalamud.Bindings.ImGui.ImDrawData 的包装器。
 
 ### ImGuiHelpers.ImFontAtlasCustomRectReal​
 

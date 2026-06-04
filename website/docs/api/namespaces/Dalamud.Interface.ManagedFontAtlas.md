@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Interface.ManagedFontAtlas"
 
 ### FontAtlasBuildToolkitUtilities​
 
-通过 Dalamud.Interface.ManagedFontAtlas.IFontAtlas 构建字体的便捷函数。
+通过 Dalamud.Interface.ManagedFontAtlas.IFontAtlas 构建字体的便捷功能。
 
 ## 结构体
 
@@ -31,7 +31,7 @@ Dalamud.Bindings.ImGui.ImFontAtlasPtr 的包装器。并不打算供插件实现
 
 ### IFontAtlasBuildToolkit​
 
-用于 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPreBuild 和 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPostBuild 的公共内容。并不打算供插件实现。
+用于 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPreBuild 和 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkitPostBuild 的通用内容。并不打算供插件实现。
 
 ### IFontAtlasBuildToolkitPostBuild​
 
@@ -39,7 +39,7 @@ Dalamud.Bindings.ImGui.ImFontAtlasPtr 的包装器。并不打算供插件实现
 
 ### IFontAtlasBuildToolkitPreBuild​
 
-在构建状态为 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStep.PreBuild 时使用的工具包。并不打算供插件实现。在 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStepDelegate 返回后，必须设置 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkit.Font，或者至少必须使用 AddFont... 函数之一向图集添加一个字体。
+在构建状态为 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStep.PreBuild 时使用的工具包。并不打算供插件实现。在 Dalamud.Interface.ManagedFontAtlas.FontAtlasBuildStepDelegate 返回后，必须设置 Dalamud.Interface.ManagedFontAtlas.IFontAtlasBuildToolkit.Font，或者至少必须使用 AddFont... 函数将一个字体添加到字体图集中。
 
 ### IFontHandle​
 
@@ -47,7 +47,7 @@ Dalamud.Bindings.ImGui.ImFontAtlasPtr 的包装器。并不打算供插件实现
 
 ### ILockedImFont​
 
-Dalamud.Bindings.ImGui.ImFontPtr 的包装器，保证只要该结构未被释放，相关数据将可用。并不打算供插件实现。
+Dalamud.Bindings.ImGui.ImFontPtr 的包装器，确保只要该结构未被释放，相关数据将始终可用。并不打算供插件实现。
 
 ## 枚举
 
@@ -71,5 +71,5 @@ Dalamud.Interface.ManagedFontAtlas.IFontAtlas 的构建步骤。
 
 ### IFontHandle.ImFontChangedDelegate​
 
-用于 Dalamud.Interface.ManagedFontAtlas.IFontHandle.ImFontChanged 的委托。
+Dalamud.接口.ManagedFontAtlas.IFontHandle.ImFontChanged 的委托
 

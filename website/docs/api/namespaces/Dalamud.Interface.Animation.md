@@ -11,7 +11,7 @@ sidebar_label: "Dalamud.Interface.Animation"
 
 ### AnimUtil​
 
-提供在动画过程中辅助功能的类。
+提供在促进动画时的辅助功能的类。
 
 ### Easing​
 

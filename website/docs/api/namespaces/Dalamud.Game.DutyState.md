@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.DutyState"
 
 ### IDutyStateEventArgs​
 
-提供任务状态更改时事件数据的接口。
+在副本状态改变时提供事件数据的接口。
 

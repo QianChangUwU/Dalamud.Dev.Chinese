@@ -11,11 +11,11 @@ sidebar_label: "Dalamud.Game.Network.Structures"
 
 ### MarketBoardCurrentOfferings​
 
-此类表示来自游戏网络数据包的当前市场板报价。
+此类表示来自游戏网络数据包的当前市场板提供。
 
 ### MarketBoardCurrentOfferings.MarketBoardItemListing​
 
-此类表示来自 Dalamud.Game.Network.Structures.MarketBoardCurrentOfferings 网络数据包的单个物品的当前市场板报价。
+此类表示来自 Dalamud.Game.Network.Structures.MarketBoardCurrentOfferings 网络数据包的单个物品的当前市场板提供。
 
 ### MarketBoardCurrentOfferings.MarketBoardItemListing.ItemMateria​
 
@@ -23,11 +23,11 @@ sidebar_label: "Dalamud.Game.Network.Structures"
 
 ### MarketBoardHistory​
 
-此类表示来自游戏网络数据包的市场板历史记录。
+此类表示来自游戏网络数据包的市场板历史。
 
 ### MarketBoardHistory.MarketBoardHistoryListing​
 
-此类表示来自 Dalamud.Game.Network.Structures.MarketBoardHistory 网络数据包的单个物品的市场板历史记录。
+此类表示来自 Dalamud.Game.Network.Structures.MarketBoardHistory 网络数据包的单个物品的市场板历史。
 
 ### MarketBoardPurchase​
 
@@ -39,7 +39,7 @@ sidebar_label: "Dalamud.Game.Network.Structures"
 
 ### MarketTaxRates​
 
-此类表示 "结果对话框" 数据包。这也用于例如减税结果，但我们只关心税率。我们可以通过检查 "类别" 字段来做到这一点。
+此类表示 "结果对话框" 数据包。这也用于例如减免结果，但我们只关心税率。我们可以通过检查 "类别" 字段来做到这一点。
 
 ## 接口
 
@@ -49,19 +49,19 @@ sidebar_label: "Dalamud.Game.Network.Structures"
 
 ### IMarketBoardCurrentOfferings​
 
-表示当前市场板报价的接口。
+表示当前市场板提供的接口。
 
 ### IMarketBoardHistory​
 
-表示游戏中的市场板历史记录的接口。
+表示来自游戏的市场板历史的接口。
 
 ### IMarketBoardHistoryListing​
 
-表示来自 Dalamud.Game.Network.Structures.IMarketBoardHistory 的单个物品的市场板历史记录的接口。
+表示来自 Dalamud.Game.Network.Structures.IMarketBoardHistory 的单个物品的市场板历史的接口。
 
 ### IMarketBoardItemListing​
 
-表示来自 Dalamud.Game.Network.Structures.IMarketBoardCurrentOfferings 的单个物品的当前市场板报价的接口。
+表示来自 Dalamud.Game.Network.Structures.IMarketBoardCurrentOfferings 的单个物品的当前市场板提供的接口。
 
 ### IMarketBoardPurchase​
 

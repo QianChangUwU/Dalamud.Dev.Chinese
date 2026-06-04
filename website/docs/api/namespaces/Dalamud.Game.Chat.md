@@ -15,7 +15,7 @@ sidebar_label: "Dalamud.Game.Chat"
 
 ### IHandleableChatMessage​
 
-表示可以由插件处理的聊天消息的接口。
+表示可以被插件处理的聊天消息的接口。
 
 ### ILogMessage​
 

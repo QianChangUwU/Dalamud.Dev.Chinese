@@ -11,5 +11,5 @@ sidebar_label: "Dalamud.Game.ClientState.Aetherytes"
 
 ### IAetheryteEntry​
 
-表示游戏中可用的水晶入口的接口。
+表示游戏中可用的以太水晶条目的接口。
 

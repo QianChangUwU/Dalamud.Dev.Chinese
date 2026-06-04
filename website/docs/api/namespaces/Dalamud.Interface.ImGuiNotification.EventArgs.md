@@ -11,13 +11,13 @@ sidebar_label: "Dalamud.Interface.ImGuiNotification.EventArgs"
 
 ### INotificationClickArgs​
 
-与 Dalamud.Interface.ImGuiNotification.IActiveNotification.Click 一起使用的参数。
+用于 Dalamud.Interface.ImGuiNotification.IActiveNotification.Click 的参数。
 
 ### INotificationDismissArgs​
 
-与 Dalamud.Interface.ImGuiNotification.IActiveNotification.Dismiss 一起使用的参数。
+用于 Dalamud.Interface.ImGuiNotification.IActiveNotification.Dismiss 的参数。
 
 ### INotificationDrawArgs​
 
-与 Dalamud.Interface.ImGuiNotification.IActiveNotification.DrawActions 一起使用的参数。
+用于 Dalamud.Interface.ImGuiNotification.IActiveNotification.DrawActions 的参数。
 
